@@ -9,5 +9,6 @@ namespace SuperFacil.Dominio.Modelos.Administração
     public class Adm_Usuario
     {
         public int UsuarioID { get; set; }
+        public string usuario { get; set; }
     }
 }
