@@ -57,10 +57,12 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         /// <param name="_confirmar"></param>
         public void Set_Senha(string _senha, string _confirmar)
         {
+            // Validação da senha
             AssertionConcern.AssertArgumentNotNull(_senha,Adm_Res_Usuario.TagSenhaNull);       
             AssertionConcern.AssertArgumentEquals(_senha, _confirmar, Adm_Res_Usuario.TagSenhaDiferente);
             AssertionConcern.AssertArgumentLength(_senha, 4, 20, Adm_Res_Usuario.TagSenhaTamanho);
 
+            // Esta atribuição será feito somente se as condições a cima forem validas
             this.Senha = _senha;
         }
 
