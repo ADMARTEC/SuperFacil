@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Dominio", "Super
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Infraestrutura", "SuperFacil.Infraestrutura\SuperFacil.Infraestrutura.csproj", "{1972B967-7015-49C4-BB98-4BCD6394A60A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Common", "SuperFacil.Common\SuperFacil.Common.csproj", "{986504B0-0549-47EF-9DF3-2732127FA49D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Bussines", "SuperFacil.Bussines\SuperFacil.Bussines.csproj", "{49F80C19-D87C-46CA-972D-74A438704622}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1972B967-7015-49C4-BB98-4BCD6394A60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1972B967-7015-49C4-BB98-4BCD6394A60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1972B967-7015-49C4-BB98-4BCD6394A60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986504B0-0549-47EF-9DF3-2732127FA49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986504B0-0549-47EF-9DF3-2732127FA49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986504B0-0549-47EF-9DF3-2732127FA49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986504B0-0549-47EF-9DF3-2732127FA49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F80C19-D87C-46CA-972D-74A438704622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F80C19-D87C-46CA-972D-74A438704622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F80C19-D87C-46CA-972D-74A438704622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F80C19-D87C-46CA-972D-74A438704622}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
