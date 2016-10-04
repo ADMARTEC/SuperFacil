@@ -41,6 +41,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\Administracao\Adm_Res_Usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Adm_Res_Usuario.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Base.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Base.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validacao\AssertionConcern.cs" />
+    <Compile Include="Validacao\EmailAssertionConcern.cs" />
+    <Compile Include="Validacao\PasswordAssertionConcern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\Sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Administracao\Adm_Res_Usuario.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Adm_Res_Usuario.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Base.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Base.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

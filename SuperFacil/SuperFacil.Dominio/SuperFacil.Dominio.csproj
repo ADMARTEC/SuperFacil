@@ -43,7 +43,9 @@
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Crud.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
+    <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />
+    <Compile Include="Modelos\Sistema\Sis_Empresa.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,6 +53,12 @@
   <ItemGroup>
     <Folder Include="Repositorios\" />
     <Folder Include="Servicos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
+      <Project>{986504B0-0549-47EF-9DF3-2732127FA49D}</Project>
+      <Name>SuperFacil.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,6 +6,7 @@
     public abstract class Abs_Base: Abs_Crud
     {
         public string Designacao { get; set; }
-
+        public string Morada { get; set; }
+        public string NIF { get; set; }
     }
 }
