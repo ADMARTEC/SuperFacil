@@ -45,7 +45,8 @@
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
     <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />
-    <Compile Include="Modelos\Sistema\Sis_Empresa.cs" />
+    <Compile Include="Modelos\Global\Glo_Paises.cs" />
+    <Compile Include="Modelos\Administracao\Adm_Empresa.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
