@@ -5,17 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperFacil.Dominio.Modelos.Sistema
+namespace SuperFacil.Dominio.Modelos.Multimidia
 {
     /* 
     * Propriedades Abstratas a ter em conta:
-    * Designação
+    * Designacao
     * Create,Update e Deleted  --- Nunca deve faltar em nenhuma classe
     */
-    public class Sis_Menu : Abs_Base
+    public class Mul_Localizacao : Abs_Base
     {
         #region - Propriedade -
-        public int Menu_ID { get; set; }
+        public int Localizacao_ID { get; set; }
+        public int Empresa_ID { get; set; }
+
+        /// <summary>
+        /// Quando preenchido indica um compartimento dentro do outro
+        /// </summary>
         public int Parent_ID { get; set; }
         #endregion
     }

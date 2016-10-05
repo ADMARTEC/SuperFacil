@@ -6,7 +6,7 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
     /// Campos obrigatorios em todas as classes, de modo a termos o
     /// registo de quem executou cada operação.
     /// </summary>
-    public abstract class Abs_Crud: Abs_Pessoa
+    public abstract class Abs_Cud: Abs_Pessoa
     {
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }

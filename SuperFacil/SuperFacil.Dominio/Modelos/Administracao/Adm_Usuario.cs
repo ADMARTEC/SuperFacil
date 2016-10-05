@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Administracao
 {
+    /* 
+    * Propriedades Abstratas a ter em conta:
+    * Nome,
+    * Create,Update e Deleted  --- Nunca deve faltar em nenhuma classe
+    */
     public class Adm_Usuario : Abs_Base
     {
 
@@ -18,7 +23,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Perfil_ID { get; set; } // Referencia a tabela de Perfil
         public string Usuario_login { get; set; }
         public string Senha { get; private set; }
-        public DateTime Data_Limite { get; set; }
+        public DateTime Data_Limite { get; set; }      
         #endregion
 
         /// <summary>
