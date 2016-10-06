@@ -14,7 +14,6 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
     * Nota que o titulo é representado pela Designação
     */
     public class Mul_Midia : Abs_Base
-
     {
         #region Propriedade
         public int Midia_ID { get; set; }
