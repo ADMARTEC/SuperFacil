@@ -53,11 +53,9 @@
     <Compile Include="Modelos\Global\Glo_Morada.cs" />
     <Compile Include="Modelos\Global\Glo_Pais.cs" />
     <Compile Include="Modelos\Administracao\Adm_Empresa.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Album.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Autor.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Biografia.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Localizacao.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Musica.cs" />
     <Compile Include="Modelos\Recursos_Humano\Reh_Funcionario.cs" />
     <Compile Include="Modelos\Sistema\Sis_HorarioAcesso.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
