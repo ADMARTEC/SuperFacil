@@ -5,8 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperFacil.Dominio.Modelos.Sistema
+namespace SuperFacil.Dominio.Modelos.Administracao
 {
+    /* 
+     * Propriedades Abstratas a ter em conta:
+     * Designacao,NIF,Nota
+     * Create,Update e Deleted  --- Nunca deve faltar em nenhuma classe
+     */
     public class Adm_Empresa : Abs_Base
     {
         /// <summary>
@@ -14,5 +19,7 @@ namespace SuperFacil.Dominio.Modelos.Sistema
         /// </summary>
         public int Empresa_ID { get; set; }
         public int Parent_ID { get; set; }
+        public int Contacto_ID { get; set; }
+        public int Morada_ID { get; set; }
     }
 }

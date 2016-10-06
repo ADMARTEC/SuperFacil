@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperFacil.Common.Resource.Administracao {
+namespace SuperFacil.Common.Resource {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource.Administracao {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Adm_Res_Usuario {
+    public class Res_Base {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Adm_Res_Usuario() {
+        internal Res_Base() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource.Administracao {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Administracao.Adm_Res_Usuario", typeof(Adm_Res_Usuario).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Res_Base", typeof(Res_Base).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,29 @@ namespace SuperFacil.Common.Resource.Administracao {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to As senhas são diferentes.
+        ///   Looks up a localized string similar to A designação não pode ser vazia.
         /// </summary>
-        public static string TagSenhaDiferente {
+        public static string TagDesignacaoNull {
             get {
-                return ResourceManager.GetString("TagSenhaDiferente", resourceCulture);
+                return ResourceManager.GetString("TagDesignacaoNull", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A senha não é valida.
+        ///   Looks up a localized string similar to O nome não pode ser vazio.
         /// </summary>
-        public static string TagSenhaInvalida {
+        public static string TagNomeNull {
             get {
-                return ResourceManager.GetString("TagSenhaInvalida", resourceCulture);
+                return ResourceManager.GetString("TagNomeNull", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A senha não pode ser vazia.
+        ///   Looks up a localized string similar to O nome deve ter de  8 á 250 letras.
         /// </summary>
-        public static string TagSenhaNull {
+        public static string TagNomeSize {
             get {
-                return ResourceManager.GetString("TagSenhaNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A senha deve ter de 6 a 20 caracteres.
-        /// </summary>
-        public static string TagSenhaTamanho {
-            get {
-                return ResourceManager.GetString("TagSenhaTamanho", resourceCulture);
+                return ResourceManager.GetString("TagNomeSize", resourceCulture);
             }
         }
     }

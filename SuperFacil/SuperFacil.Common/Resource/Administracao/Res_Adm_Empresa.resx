@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TagSenhaDiferente" xml:space="preserve">
-    <value>As senhas são diferentes</value>
-  </data>
-  <data name="TagSenhaInvalida" xml:space="preserve">
-    <value>A senha não é valida</value>
-  </data>
-  <data name="TagSenhaNull" xml:space="preserve">
-    <value>A senha não pode ser vazia</value>
-  </data>
-  <data name="TagSenhaTamanho" xml:space="preserve">
-    <value>A senha deve ter de 6 a 20 caracteres</value>
+  <data name="TagEmpresaInvalida" xml:space="preserve">
+    <value>A empresa não é valida</value>
   </data>
 </root>

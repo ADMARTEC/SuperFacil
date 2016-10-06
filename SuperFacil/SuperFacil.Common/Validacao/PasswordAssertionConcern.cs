@@ -7,7 +7,7 @@ namespace SuperFacil.Common.Validacao
     {
         public static void AssertIsValid(string value)
         {
-            AssertionConcern.AssertArgumentNotNull(value, Adm_Res_Usuario.TagSenhaInvalida);
+            AssertionConcern.AssertArgumentNotNull(value, Res_Adm_Usuario.TagSenhaInvalida);
         }
 
         /// <summary>

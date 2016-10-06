@@ -6,8 +6,10 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
     /// Campos obrigatorios em todas as classes, de modo a termos o
     /// registo de quem executou cada operação.
     /// </summary>
-    public abstract class Abs_Cud: Abs_Pessoa
+    public abstract class Abs_Cud : Abs_Pessoa
     {
+        #region - Propriedade -
+        public bool Activo { get; set; }
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }
         public int UpdateUser { get; set; }
@@ -19,5 +21,28 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
         /// Por defeito o valor inicial é false
         /// </summary>
         public bool Default { get; set; } = false;
+        #endregion
+
+        #region - Metodos -
+        public void Set_Cud(bool _Activo, int _CreateUser, DateTime _CreateDate, int _UpdateUser, DateTime _UpdateDate, bool _Deleted, bool _Default)
+        {
+            this.Activo = _Activo;
+            this.CreateUser = _CreateUser;
+            this.CreateDate = _CreateDate;
+            this.UpdateUser = _UpdateUser;
+            this.UpdateDate = _UpdateDate;
+            this.Deleted = _Deleted;
+            this.Default = _Default;
+        }
+
+        public void Set_Cud(bool _Activo, int _UpdateUser, DateTime _UpdateDate, bool _Deleted, bool _Default)
+        {
+            this.Activo = _Activo;
+            this.UpdateUser = _UpdateUser;
+            this.UpdateDate = _UpdateDate;
+            this.Deleted = _Deleted;
+            this.Default = _Default;
+        }
+        #endregion
     }
 }

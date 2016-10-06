@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource.Administracao {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Adm_Res_Empresa {
+    public class Res_Adm_Usuario {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Adm_Res_Empresa() {
+        internal Res_Adm_Usuario() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource.Administracao {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Administracao.Adm_Res_Empresa", typeof(Adm_Res_Empresa).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Administracao.Res_Adm_Usuario", typeof(Res_Adm_Usuario).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,60 @@ namespace SuperFacil.Common.Resource.Administracao {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As senhas são diferentes.
+        /// </summary>
+        public static string TagSenhaDiferente {
+            get {
+                return ResourceManager.GetString("TagSenhaDiferente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A senha não é valida.
+        /// </summary>
+        public static string TagSenhaInvalida {
+            get {
+                return ResourceManager.GetString("TagSenhaInvalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A senha não pode ser vazia.
+        /// </summary>
+        public static string TagSenhaNull {
+            get {
+                return ResourceManager.GetString("TagSenhaNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A senha deve ter de 6 a 20 caracteres.
+        /// </summary>
+        public static string TagSenhaTamanho {
+            get {
+                return ResourceManager.GetString("TagSenhaTamanho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nome do usuario não pode ser vazio.
+        /// </summary>
+        public static string TagUsuarioNull {
+            get {
+                return ResourceManager.GetString("TagUsuarioNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nome do usuario deve ter de 4 a 20 caracteres.
+        /// </summary>
+        public static string TagUsuarioSize {
+            get {
+                return ResourceManager.GetString("TagUsuarioSize", resourceCulture);
             }
         }
     }
