@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Abstracao
+{
+    public class Abs_Objecto : Abs_Base
     {
-   public class Abs_Objecto: Abs_Base
-        {
         // Todo Objecto (Album, Livro, Filme) tem um Título
         public string Titulo { get; set; }
         //Todo Objecto tem uma Classificação (Excelente, Bom, Bastante Bom)
@@ -15,5 +15,5 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
         //Todo Objecto tem um Genero (Kizomba, Zouk, Etc...)
         public string Genero { get; set; }
 
-        }
     }
+}

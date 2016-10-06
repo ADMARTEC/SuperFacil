@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Multimidia
-    {
+{
     /*
    * Propriedades Abstratas a ter em conta:
    * Título, Classificação e Genero
    * Create,Update e Deleted --- Nunca deve faltar em nenhuma classe
    */
-    public class Mul_Musica: Abs_Objecto
-        {
+    public class Mul_Musica : Abs_Objecto
+    {
         #region Propriedade
         public int Musica_ID { get; set; }
         public int Album_ID { get; set; }
@@ -24,5 +24,5 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public string Estado { get; set; }
         #endregion
 
-        }
     }
+}
