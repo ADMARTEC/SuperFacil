@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperFacil.Common.Resource {
+namespace SuperFacil.Common.Resource.Administracao {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Base {
+    public class Adm_Res_Empresa {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Base() {
+        internal Adm_Res_Empresa() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Base", typeof(Base).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Administracao.Adm_Res_Empresa", typeof(Adm_Res_Empresa).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,24 +57,6 @@ namespace SuperFacil.Common.Resource {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O nome não pode ser vazio.
-        /// </summary>
-        public static string TagNomeNull {
-            get {
-                return ResourceManager.GetString("TagNomeNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O nome deve ter de  8 á 250 letras.
-        /// </summary>
-        public static string TagNomeSize {
-            get {
-                return ResourceManager.GetString("TagNomeSize", resourceCulture);
             }
         }
     }

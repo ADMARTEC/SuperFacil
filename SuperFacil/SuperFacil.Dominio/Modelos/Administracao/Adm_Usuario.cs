@@ -1,4 +1,5 @@
-﻿using SuperFacil.Common.Resource.Administracao;
+﻿using SuperFacil.Common.Resource;
+using SuperFacil.Common.Resource.Administracao;
 using SuperFacil.Common.Validacao;
 using SuperFacil.Dominio.Modelos.Abstracao;
 using System;
@@ -21,9 +22,9 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Usuario_ID { get; set; }
         public int Empresa_ID { get; set; } // Referencia a tabela de Empresa
         public int Perfil_ID { get; set; } // Referencia a tabela de Perfil
-        public string Usuario_login { get; set; }
+        public string Usuario_login { get; private set; }
         public string Senha { get; private set; }
-        public DateTime Data_Limite { get; set; }      
+        public DateTime Data_Limite { get; set; }
         #endregion
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         /// <param name="_Nome"></param>
         /// <param name="_Usuario"></param>
         public void Set_Usuario(int _Empresa, string _Nome, string _Usuario)
-        {
+        {         
             this.Nome = _Nome;
             this.Usuario_login = _Usuario;
         }
@@ -63,7 +64,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public void Set_Senha(string _senha, string _confirmar)
         {
             // Validação da senha
-            AssertionConcern.AssertArgumentNotNull(_senha,Adm_Res_Usuario.TagSenhaNull);       
+            AssertionConcern.AssertArgumentNotNull(_senha, Adm_Res_Usuario.TagSenhaNull);
             AssertionConcern.AssertArgumentEquals(_senha, _confirmar, Adm_Res_Usuario.TagSenhaDiferente);
             AssertionConcern.AssertArgumentLength(_senha, 4, 20, Adm_Res_Usuario.TagSenhaTamanho);
 
@@ -71,7 +72,15 @@ namespace SuperFacil.Dominio.Modelos.Administracao
             this.Senha = _senha;
         }
 
+        public void Auto_Validar()
+        {
+            AssertionConcern.AssertArgumentNotNull(this.Nome, Base.TagNomeNull);
+            AssertionConcern.AssertArgumentNotEmpty(this.Nome, Base.TagNomeNull);
+            AssertionConcern.AssertArgumentLength(this.Nome, 8, 250, Base.TagNomeSize);
 
-
+            AssertionConcern.AssertArgumentNotNull(this.Nome, Base.TagNomeNull);
+            AssertionConcern.AssertArgumentNotEmpty(this.Nome, Base.TagNomeNull);
+            AssertionConcern.AssertArgumentLength(this.Nome, 8, 250, Base.TagNomeSize);
+        }
     }
 }
