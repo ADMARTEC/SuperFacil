@@ -40,17 +40,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Perfil_Repositorio.cs" />
+    <Compile Include="Contratos\Servicos\Administracao\IAdm_Usuario_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Crud.cs" />
+    <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
+    <Compile Include="Modelos\Abstracao\Abs_Identificadores.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
+    <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />
+    <Compile Include="Modelos\Global\Glo_Contacto.cs" />
+    <Compile Include="Modelos\Global\Glo_Morada.cs" />
+    <Compile Include="Modelos\Global\Glo_Pais.cs" />
+    <Compile Include="Modelos\Administracao\Adm_Empresa.cs" />
+    <Compile Include="Modelos\Multimidia\Mul_Autor.cs" />
+    <Compile Include="Modelos\Multimidia\Mul_Biografia.cs" />
+    <Compile Include="Modelos\Multimidia\Mul_Localizacao.cs" />
+    <Compile Include="Modelos\Multimidia\Mul_Midia.cs" />
+    <Compile Include="Modelos\Recursos_Humano\Reh_Funcionario.cs" />
+    <Compile Include="Modelos\Sistema\Sis_HorarioAcesso.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Usuario_Repositorio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositorios\" />
-    <Folder Include="Servicos\" />
+    <Folder Include="Contratos\Repositorios\Global\" />
+    <Folder Include="Contratos\Repositorios\Multimidia\" />
+    <Folder Include="Contratos\Repositorios\Sistema\" />
+    <Folder Include="Contratos\Servicos\Global\" />
+    <Folder Include="Contratos\Servicos\Multimidia\" />
+    <Folder Include="Contratos\Servicos\Sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
+      <Project>{986504B0-0549-47EF-9DF3-2732127FA49D}</Project>
+      <Name>SuperFacil.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

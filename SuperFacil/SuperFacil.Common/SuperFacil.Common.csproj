@@ -41,6 +41,50 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\Administracao\Res_Adm_Empresa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Adm_Empresa.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Administracao\Res_Adm_Perfil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Adm_Perfil.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Administracao\Res_Adm_Usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Adm_Usuario.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Res_Base.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Base.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validacao\AssertionConcern.cs" />
+    <Compile Include="Validacao\EmailAssertionConcern.cs" />
+    <Compile Include="Validacao\PasswordAssertionConcern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\Sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Administracao\Res_Adm_Empresa.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Adm_Empresa.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Administracao\Res_Adm_Perfil.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Adm_Perfil.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Administracao\Res_Adm_Usuario.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Adm_Usuario.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Res_Base.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Base.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
