@@ -43,7 +43,6 @@
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Identificadores.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Objecto.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
     <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />
@@ -51,11 +50,10 @@
     <Compile Include="Modelos\Global\Glo_Morada.cs" />
     <Compile Include="Modelos\Global\Glo_Pais.cs" />
     <Compile Include="Modelos\Administracao\Adm_Empresa.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Album.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Autor.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Biografia.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Localizacao.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Musica.cs" />
+    <Compile Include="Modelos\Multimidia\Mul_Midia.cs" />
     <Compile Include="Modelos\Sistema\Sis_HorarioAcesso.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
