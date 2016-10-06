@@ -19,6 +19,7 @@ namespace SuperFacil.Dominio.Modelos.Global
         /// Se preencher este campo estará a fazer referencia a uma provincia ou municipio
         /// isso através da recursividade.
         /// </summary>
-        public int Parent_ID { get; set; } 
+        public int? Parent_ID { get; set; }
+        public int Empresa_ID { get; set; }
     }
 }
