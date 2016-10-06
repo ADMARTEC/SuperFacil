@@ -7,6 +7,14 @@
         public string NIF { get; set; }
 
         /// <summary>
+        /// Propriedades Abstractas para a Midia: Musica, Album, Filme, Livro
+        /// Todo Objecto tem uma Classificação (Excelente, Bom, Bastante Bom)
+        /// </summary>
+        public string Classificacao { get; set; }
+        //Todo Objecto tem um Genero (Kizomba, Zouk, Etc...)
+        public string Genero { get; set; }
+
+        /// <summary>
         /// Indica uma Observação ou textos livres
         /// </summary>
         public string Notas { get; set; } 
