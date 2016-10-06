@@ -9,7 +9,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
 {
     /*
      * Propriedades Abstratas a ter em conta:
-     * Nome, Sobrenome, Alcunha
+     * Nome, Sobrenome, Alcunha,
      * Create,Update e Deleted --- Nunca deve faltar em nenhuma classe
      */
     public class Mul_Autor : Abs_Base
