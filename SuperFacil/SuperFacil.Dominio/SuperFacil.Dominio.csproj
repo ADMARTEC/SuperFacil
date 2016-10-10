@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contratos\Repositorios\Administracao\IAdm_Perfil_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Usuario_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Identificadores.cs" />
@@ -65,10 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\Repositorios\Global\" />
-    <Folder Include="Contratos\Repositorios\Multimidia\" />
     <Folder Include="Contratos\Repositorios\Sistema\" />
     <Folder Include="Contratos\Servicos\Global\" />
-    <Folder Include="Contratos\Servicos\Multimidia\" />
     <Folder Include="Contratos\Servicos\Sistema\" />
   </ItemGroup>
   <ItemGroup>
