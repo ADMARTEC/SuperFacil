@@ -1,4 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Sistema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,16 @@ namespace SuperFacil.Dominio.Modelos.Administracao
      */
     public class Adm_Empresa : Abs_Base
     {
+        #region - Construtor -       
+        public Adm_Empresa()
+        {
+            this.Perfil = new List<Adm_Perfil>();
+            this.Usuario = new List<Adm_Usuario>();
+            this.HorarioAcesso = new List<Sis_HorarioAcesso>();
+        }
+        #endregion
+
+        #region - Propriedade -
         /// <summary>
         /// Este campo deve estar presente em todas as classes, isso por causa do Multiempresa
         /// </summary>
@@ -21,5 +32,12 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Parent_ID { get; set; }
         public int Contacto_ID { get; set; }
         public int Morada_ID { get; set; }
+        #endregion
+
+        #region - Relacionamento -
+        public virtual ICollection<Adm_Perfil> Perfil { get; set; }
+        public virtual ICollection<Adm_Usuario> Usuario { get; set; }
+        public virtual ICollection<Sis_HorarioAcesso> HorarioAcesso { get; set; }
+        #endregion
     }
 }

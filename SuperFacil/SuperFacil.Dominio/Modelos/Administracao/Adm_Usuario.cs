@@ -2,6 +2,7 @@
 using SuperFacil.Common.Resource.Administracao;
 using SuperFacil.Common.Validacao;
 using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Recursos_Humano;
 using System;
 
 namespace SuperFacil.Dominio.Modelos.Administracao
@@ -13,7 +14,6 @@ namespace SuperFacil.Dominio.Modelos.Administracao
     */
     public class Adm_Usuario : Abs_Base
     {
-
         #region - Propriedade -
         public int Usuario_ID { get; set; }
         public int Empresa_ID { get; set; } // Referencia a tabela de Empresa
@@ -22,7 +22,13 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public string Usuario_login { get; private set; }
         public string Senha { get; private set; }
         public DateTime Data_Limite { get; set; }
-        #endregion        
+        #endregion
+
+        #region - Relacionamento -
+        public virtual Adm_Empresa Empresa { get; set; }
+        public virtual Adm_Perfil Perfil { get; set; }
+        public virtual Reh_Funcionario Funcionario { get; set; }
+        #endregion
 
         #region - Metodos -
         /// <summary>

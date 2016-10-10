@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Empresa.cs" />
     <Compile Include="Contratos\Repositorios\Administracao\IAdm_Perfil_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Usuario_Servico.cs" />
@@ -67,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\Repositorios\Global\" />
+    <Folder Include="Contratos\Repositorios\Recursos_Humanos\" />
     <Folder Include="Contratos\Repositorios\Sistema\" />
     <Folder Include="Contratos\Servicos\Global\" />
+    <Folder Include="Contratos\Servicos\Recursos_Humanos\" />
     <Folder Include="Contratos\Servicos\Sistema\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,8 @@
 ﻿using SuperFacil.Common.Resource;
 using SuperFacil.Common.Validacao;
 using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Sistema;
+using System.Collections.Generic;
 
 namespace SuperFacil.Dominio.Modelos.Administracao
 {
@@ -11,11 +13,24 @@ namespace SuperFacil.Dominio.Modelos.Administracao
      */
     public class Adm_Perfil : Abs_Base
     {
+        #region - Construtor -
+        public Adm_Perfil()
+        {
+            this.Usuario = new List<Adm_Usuario>();
+        }
+        #endregion
+
         #region - Propriedade -
         public int Perfil_ID { get; set; }
         public int Empresa_ID { get; set; }
         public int? Parent_ID { get; set; }
         public int HorarioAcesso_ID { get; set; }
+        #endregion
+
+        #region - Relacionamento -
+        public virtual ICollection<Adm_Usuario> Usuario { get; set; }
+        public virtual Adm_Empresa Empresa { get; set; }
+        public virtual Sis_HorarioAcesso HorarioAcesso { get; set; }
         #endregion
 
         #region - Metodos -

@@ -1,0 +1,17 @@
+﻿using SuperFacil.Dominio.Modelos.Administracao;
+using System.Threading.Tasks;
+
+namespace SuperFacil.Dominio.Contratos.Repositorios.Administracao
+{
+    public interface IAdm_Empresa
+    {
+        Task<Adm_Empresa> GetByID(int value);
+        Task<Adm_Empresa> GetByParent(int Empresa, int value);
+        Task<Adm_Empresa> GetByNIF(int Empresa, int value);
+
+        void Create(Adm_Empresa empresa);
+        void Update(Adm_Empresa empresa);
+        void Deleted(Adm_Empresa empresa);
+
+    }
+}
