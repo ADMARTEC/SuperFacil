@@ -18,5 +18,9 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public int Autor_ID { get; set; }
         public int Empresa_ID { get; set; }
         #endregion
+
+        #region Relacionamento
+        public virtual ICollection<Mul_Midia> Midia { get; set; }
+        #endregion
+        }
     }
-}
