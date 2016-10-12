@@ -1,6 +1,7 @@
 ﻿using SuperFacil.Common.Resource;
 using SuperFacil.Common.Validacao;
 using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Administracao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,10 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public string Estado { get; set; }
         #endregion
 
+        #region Relacionamento
+        public virtual Adm_Empresa Empresa { get; set; }
+        public virtual Mul_Autor Autor { get; set; }
+        #endregion
 
         #region - Metodos -
         /// <summary>
