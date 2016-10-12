@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Multimidia
-    {
+{
     /* 
     * Propriedades Abstratas a ter em conta:
     * Designação, Classificação e Genero
@@ -16,7 +16,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
     * Nota que o titulo é representado pela Designação
     */
     public class Mul_Midia : Abs_Base
-        {
+    {
         #region Propriedade
         public int Midia_ID { get; set; }
         public int Empresa_ID { get; set; }
@@ -54,7 +54,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public void Set_Midia(int _Empresa, int _Localizacao, int _Autor, DateTime _Ano_Lancamento,
                               string _Editora, string _Duracao, string _Tag, string _Estado,
                               string _Designacao, int? _Parent = null, int? _Faixa = null)
-            {
+        {
 
             AssertionConcern.AssertArgumentNotNull(_Designacao, Res_Base.TagDesignacaoNull);
             AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);
@@ -70,7 +70,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
             this.Tag = _Tag;
             this.Estado = _Estado;
             this.Designacao = _Designacao;
-            }
-        #endregion
         }
+        #endregion
     }
+}

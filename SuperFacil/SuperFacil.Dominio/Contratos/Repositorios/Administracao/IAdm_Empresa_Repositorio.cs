@@ -1,9 +1,10 @@
 ﻿using SuperFacil.Dominio.Modelos.Administracao;
+using System;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Repositorios.Administracao
 {
-    public interface IAdm_Empresa
+    public interface IAdm_Empresa_Repositorio: IDisposable
     {
         Task<Adm_Empresa> GetByID(int value);
         Task<Adm_Empresa> GetByParent(int Empresa, int value);

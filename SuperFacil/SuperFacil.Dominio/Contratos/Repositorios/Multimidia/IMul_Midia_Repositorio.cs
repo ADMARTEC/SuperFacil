@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
-    {
+{
     public interface IMul_Midia_Repositorio : IDisposable
-        {
+    {
 
         #region SELECT - R
         Task<Mul_Midia> GetByID(int Empresa, int value);
@@ -18,7 +18,7 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         Task<Mul_Midia> GetByAutor(int Empresa, int value);
         Task<Mul_Midia> GetByTag(int Empresa, string value);
         Task<Mul_Midia> GetByLocalizacao(int Empresa, int value);
-        Task<Mul_Midia> GetByAno_Lancamento(int Empresa, DateTime value); 
+        Task<Mul_Midia> GetByAno_Lancamento(int Empresa, DateTime value);
         #endregion
 
         #region CUD
@@ -26,5 +26,5 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         void Update(Mul_Midia midia);
         void Deleted(Mul_Midia midia);
         #endregion
-        }
     }
+}
