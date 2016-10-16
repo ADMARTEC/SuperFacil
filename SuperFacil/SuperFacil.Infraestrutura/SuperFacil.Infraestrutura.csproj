@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +49,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeamento\Administracao\Adm_Empresa_Map.cs" />
+    <Compile Include="Mapeamento\Administracao\Adm_Perfil_Map.cs" />
+    <Compile Include="Mapeamento\Administracao\Adm_Usuario_Map.cs" />
+    <Compile Include="Mapeamento\Global\Glo_Contacto_Map.cs" />
+    <Compile Include="Mapeamento\Global\Glo_Morada_Map.cs" />
+    <Compile Include="Mapeamento\Global\Glo_Pais_Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\Administracao\Adm_Perfil_Repositorio.cs" />
+    <Compile Include="Repositorio\Administracao\Adm_Empresa_Repositorio.cs" />
+    <Compile Include="Repositorio\Administracao\Adm_Usuario_Repositorio.cs" />
+    <Compile Include="Repositorio\Global\Glo_Contacto_Repositorio.cs" />
+    <Compile Include="Repositorio\Global\Glo_Morada_Repositorio.cs" />
+    <Compile Include="Repositorio\Global\Glo_Pais_Repositorio.cs" />
+    <Compile Include="SuperFacilContexto.cs" />
+    <Compile Include="SuperFacilInicializador.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapeamento\Multimidia\" />
+    <Folder Include="Mapeamento\Recursos_Humano\" />
+    <Folder Include="Mapeamento\Sistema\" />
+    <Folder Include="Repositorio\Multimidia\" />
+    <Folder Include="Repositorio\Recursos_Humanos\" />
+    <Folder Include="Repositorio\Sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperFacil.Dominio\SuperFacil.Dominio.csproj">
+      <Project>{D3A91213-B6E9-406D-847C-6E8D2DA76519}</Project>
+      <Name>SuperFacil.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
