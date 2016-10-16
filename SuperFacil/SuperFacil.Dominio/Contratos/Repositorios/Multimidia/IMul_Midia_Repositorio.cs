@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
-{
-    public interface IMul_Midia_Repositorio : IDisposable
     {
+    public interface IMul_Midia_Repositorio : IDisposable
+        {
 
         #region SELECT - R
         Task<Mul_Midia> GetByID(int Empresa, int value);
         Task<Mul_Midia> GetByParent(int Empresa, int value);
-        Task<Mul_Midia> GetByFixa(int Empresa, int value);
+        Task<Mul_Midia> GetByFaixa(int Empresa, int value);
         Task<Mul_Midia> GetByDesiginacao(int Empresa, string value);
         Task<Mul_Midia> GetByAutor(int Empresa, int value);
         Task<Mul_Midia> GetByTag(int Empresa, string value);
@@ -26,5 +26,5 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         void Update(Mul_Midia midia);
         void Deleted(Mul_Midia midia);
         #endregion
+        }
     }
-}
