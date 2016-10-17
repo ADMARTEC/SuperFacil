@@ -1,48 +1,57 @@
 ﻿using SuperFacil.Dominio.Contratos.Repositorios.Administracao;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SuperFacil.Dominio.Modelos.Administracao;
+using System;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuperFacil.Infraestrutura.Repositorio.Administracao
 {
     public class Adm_Empresa_Repositorio : IAdm_Empresa_Repositorio
     {
-        public void Create(Adm_Empresa empresa)
-        {
-            throw new NotImplementedException();
-        }
+        private SuperFacilContexto db;
 
-        public void Deleted(Adm_Empresa empresa)
+        public Adm_Empresa_Repositorio(SuperFacilContexto _db)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            db = _db;
         }
 
         public Task<Adm_Empresa> GetByID(int value)
         {
-            throw new NotImplementedException();
+            return db.Adm_Empresa.Where(x => x.Empresa_ID == value).FirstOrDefaultAsync();
         }
 
-        public Task<Adm_Empresa> GetByNIF(int Empresa, int value)
+        public Task<Adm_Empresa> GetByNIF(int Empresa, string value)
         {
-            throw new NotImplementedException();
+            return db.Adm_Empresa.Where(x => x.Empresa_ID == Empresa && x.NIF == value).FirstOrDefaultAsync();
         }
 
         public Task<Adm_Empresa> GetByParent(int Empresa, int value)
         {
-            throw new NotImplementedException();
+            return db.Adm_Empresa.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == value).FirstOrDefaultAsync();
         }
 
-        public void Update(Adm_Empresa empresa)
+        public async void Create(Adm_Empresa empresa)
         {
-            throw new NotImplementedException();
+            db.Adm_Empresa.Add(empresa);
+            await db.SaveChangesAsync();
+        }
+
+        public async void Update(Adm_Empresa empresa)
+        {
+            db.Entry<Adm_Empresa>(empresa).State = EntityState.Modified;
+            await db.SaveChangesAsync();
+        }
+
+        public void Deleted(Adm_Empresa empresa)
+        {
+            Update(empresa);
+        }
+
+        public void Dispose()
+        {
+            db.Dispose();
+            GC.Collect();
         }
     }
 }
