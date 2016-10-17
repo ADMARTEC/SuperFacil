@@ -55,6 +55,7 @@
     <Compile Include="Mapeamento\Global\Glo_Contacto_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Morada_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Pais_Map.cs" />
+    <Compile Include="Mapeamento\Multimidia\Mul_Midia_Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\Administracao\Adm_Perfil_Repositorio.cs" />
     <Compile Include="Repositorio\Administracao\Adm_Empresa_Repositorio.cs" />
@@ -62,14 +63,14 @@
     <Compile Include="Repositorio\Global\Glo_Contacto_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Morada_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Pais_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Autor_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Midia_Repositorio.cs" />
     <Compile Include="SuperFacilContexto.cs" />
     <Compile Include="SuperFacilInicializador.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mapeamento\Multimidia\" />
     <Folder Include="Mapeamento\Recursos_Humano\" />
     <Folder Include="Mapeamento\Sistema\" />
-    <Folder Include="Repositorio\Multimidia\" />
     <Folder Include="Repositorio\Recursos_Humanos\" />
     <Folder Include="Repositorio\Sistema\" />
   </ItemGroup>
