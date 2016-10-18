@@ -31,6 +31,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Empresa_ID { get; set; }
         public int Parent_ID { get; set; }
         public int Contacto_ID { get; set; }
+        public int Pais_ID { get; set; }
         public int Morada_ID { get; set; }
         #endregion
 

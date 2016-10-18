@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +55,8 @@
     <Compile Include="Contratos\Repositorios\Global\IGlo_Contacto_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Global\IGlo_Morada_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Global\IGlo_Pais_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Autor_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Biografia_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Empresa_Servico.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Perfil_Servico.cs" />
@@ -53,6 +64,8 @@
     <Compile Include="Contratos\Servicos\Global\IGlo_Contacto_Servico.cs" />
     <Compile Include="Contratos\Servicos\Global\IGlo_Morada_Servico.cs" />
     <Compile Include="Contratos\Servicos\Global\IGlo_Pais_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Multimidia\IMul_Autor_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Multimidia\IMul_Biografia_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
@@ -85,6 +98,10 @@
       <Project>{986504b0-0549-47ef-9df3-2732127fa49d}</Project>
       <Name>SuperFacil.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

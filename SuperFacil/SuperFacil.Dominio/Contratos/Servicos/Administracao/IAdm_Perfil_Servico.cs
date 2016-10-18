@@ -9,13 +9,10 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Administracao
 {
     public interface IAdm_Perfil_Servico : IDisposable
     {
-        Task<Adm_Perfil> GetByID(int Empresa, int value);
-        Task<Adm_Perfil> GetByParent(int Empresa, int value);
-        Task<Adm_Perfil> GetByHorarioAcesso(int Empresa, int value);
-        Task<Adm_Perfil> GetByDesiginacao(int Empresa, string value);
+        Task<Adm_Perfil> GetRecursividade(int Empresa, int value);      
+        Task<Adm_Perfil> GetDesiginacao(int Empresa, string value);
 
-        void Create(Adm_Perfil perfil);
-        void Update(Adm_Perfil perfil);
-        void Deleted(Adm_Perfil perfil);
+        void Guardar(Adm_Perfil perfil);    
+        void Eliminar(Adm_Perfil perfil);
     }
 }
