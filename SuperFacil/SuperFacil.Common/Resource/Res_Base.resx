@@ -126,4 +126,7 @@
   <data name="TagNomeSize" xml:space="preserve">
     <value>O nome deve ter de  8 á 250 letras</value>
   </data>
+  <data name="TagSobrenomeNulls" xml:space="preserve">
+    <value>É obrigatório preencher o Sobrenome</value>
+  </data>
 </root>

@@ -86,5 +86,16 @@ namespace SuperFacil.Common.Resource {
                 return ResourceManager.GetString("TagNomeSize", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to É obrigatório preencher o Sobrenome.
+        /// </summary>
+        public static string TagSobrenomeNulls {
+            get {
+                return ResourceManager.GetString("TagSobrenomeNulls", resourceCulture);
+            }
+        }
+
+        public static string TagSobrenomeNull { get; set; }
     }
 }

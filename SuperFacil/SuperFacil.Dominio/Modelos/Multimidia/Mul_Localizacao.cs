@@ -1,4 +1,6 @@
-﻿using SuperFacil.Dominio.Modelos.Abstracao;
+﻿using SuperFacil.Common.Resource;
+using SuperFacil.Common.Validacao;
+using SuperFacil.Dominio.Modelos.Abstracao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +19,14 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         #region - Propriedade -
         public int Localizacao_ID { get; set; }
         public int Empresa_ID { get; set; }
-
-        /// <summary>
-        /// Quando preenchido indica um compartimento dentro do outro
-        /// </summary>
         public int Parent_ID { get; set; }
         #endregion
+
+        public void Set_Localizacao( String _Designacao, int _Empresa_ID)
+        {
+          AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
+            this.Designacao = _Designacao;
+            this.Empresa_ID =  _Empresa_ID;
+        }
     }
 }

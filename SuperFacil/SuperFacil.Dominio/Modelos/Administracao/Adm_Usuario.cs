@@ -43,6 +43,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         /// <param name="_Usuario"></param>
         public void Set_Usuario(int _Empresa, string _Nome, string _Usuario)
         {
+            this.Empresa_ID = _Empresa;
             this.Nome = _Nome;
             this.Usuario_login = _Usuario;
         }
@@ -87,7 +88,6 @@ namespace SuperFacil.Dominio.Modelos.Administracao
             AssertionConcern.AssertArgumentNotNull(this.Nome, Res_Base.TagNomeNull);
             AssertionConcern.AssertArgumentNotEmpty(this.Nome, Res_Base.TagNomeNull);
             AssertionConcern.AssertArgumentLength(this.Nome, 8, 250, Res_Base.TagNomeSize);
-
             AssertionConcern.AssertArgumentNotNull(this.Usuario_login, Res_Adm_Usuario.TagUsuarioNull);
             AssertionConcern.AssertArgumentNotEmpty(this.Usuario_login, Res_Adm_Usuario.TagUsuarioNull);
             AssertionConcern.AssertArgumentLength(this.Usuario_login, 4, 20, Res_Base.TagNomeSize);

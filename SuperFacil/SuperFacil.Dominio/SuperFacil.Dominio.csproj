@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Contratos\Repositorios\Administracao\IAdm_Empresa_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Administracao\IAdm_Perfil_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Usuario_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Global\IGlo_Contacto_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Global\IGlo_Imagem_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Global\IGlo_Morada_Repositorio.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Usuario_Repositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\Repositorios\Recursos_Humanos\" />
@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
-      <Project>{986504B0-0549-47EF-9DF3-2732127FA49D}</Project>
+      <Project>{986504b0-0549-47ef-9df3-2732127fa49d}</Project>
       <Name>SuperFacil.Common</Name>
     </ProjectReference>
   </ItemGroup>
