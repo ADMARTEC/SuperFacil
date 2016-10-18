@@ -1,4 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Administracao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace SuperFacil.Dominio.Modelos.Global
      */
     public class Glo_Contacto : Abs_Base
     {
+        public Glo_Contacto()
+        {
+            this.Empresa = new List<Adm_Empresa>();
+        }
         #region - Propriedade -  
         public int Contacto_ID { get; set; }
         public int Empresa_ID { get; set; }
@@ -21,6 +26,8 @@ namespace SuperFacil.Dominio.Modelos.Global
         public string Email { get; set; }
         public string Responsavel { get; set; } // Se o contacto pertencer a uma pessoa juridica, deve ser preenchido  com o nome de uma pessoa física
         #endregion
+
+        public virtual ICollection<Adm_Empresa> Empresa { get; set; }
     }
 
 }

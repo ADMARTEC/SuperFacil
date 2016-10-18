@@ -31,6 +31,8 @@ namespace SuperFacil.Infraestrutura
         public DbSet<Glo_Pais> Glo_Pais { get; set; }
         public DbSet<Glo_Morada> Glo_Morada { get; set; }
         public DbSet<Glo_Contacto> Glo_Contacto { get; set; }
+        public DbSet<Glo_Imagem> Glo_Imagem { get; set; }
+
         #endregion
 
         /// <summary>
@@ -45,6 +47,8 @@ namespace SuperFacil.Infraestrutura
             modelBuilder.Configurations.Add(new Glo_Contacto_Map());
             modelBuilder.Configurations.Add(new Glo_Morada_Map());
             modelBuilder.Configurations.Add(new Glo_Pais_Map());
+            modelBuilder.Configurations.Add(new Glo_Imagem_Map());
+
 
             //base.OnModelCreating(modelBuilder);
         }

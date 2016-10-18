@@ -1,4 +1,4 @@
-﻿using SuperFacil.Dominio.Modelos.Multimidia;
+﻿using SuperFacil.Dominio.Modelos.Global;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperFacil.Infraestrutura.Mapeamento.Multimidia
+namespace SuperFacil.Infraestrutura.Mapeamento.Global
 {
-    public class Mul_Midia_Map : EntityTypeConfiguration<Mul_Midia>
+    public class Glo_Imagem_Map : EntityTypeConfiguration<Glo_Imagem>
     {
     }
 }

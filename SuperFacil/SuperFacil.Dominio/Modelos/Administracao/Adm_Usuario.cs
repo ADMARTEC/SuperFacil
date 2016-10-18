@@ -2,6 +2,7 @@
 using SuperFacil.Common.Resource.Administracao;
 using SuperFacil.Common.Validacao;
 using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Global;
 using SuperFacil.Dominio.Modelos.Recursos_Humano;
 using System;
 
@@ -19,6 +20,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Empresa_ID { get; set; } // Referencia a tabela de Empresa
         public int Perfil_ID { get; set; } // Referencia a tabela de Perfil
         public int? Funcionario_ID { get; set; } // Caso o usuario seja funcionario
+        public int? Imagem_ID { get; set; }
         public string Usuario_login { get; private set; }
         public string Senha { get; private set; }
         public DateTime Data_Limite { get; set; }
@@ -28,6 +30,8 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public virtual Adm_Empresa Empresa { get; set; }
         public virtual Adm_Perfil Perfil { get; set; }
         public virtual Reh_Funcionario Funcionario { get; set; }
+        public virtual Glo_Imagem Imagem { get; set; }
+
         #endregion
 
         #region - Metodos -

@@ -53,6 +53,7 @@
     <Compile Include="Mapeamento\Administracao\Adm_Perfil_Map.cs" />
     <Compile Include="Mapeamento\Administracao\Adm_Usuario_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Contacto_Map.cs" />
+    <Compile Include="Mapeamento\Global\Glo_Imagem_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Morada_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Pais_Map.cs" />
     <Compile Include="Mapeamento\Multimidia\Mul_Midia_Map.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Repositorio\Administracao\Adm_Empresa_Repositorio.cs" />
     <Compile Include="Repositorio\Administracao\Adm_Usuario_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Contacto_Repositorio.cs" />
+    <Compile Include="Repositorio\Global\Glo_Imagem_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Morada_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Pais_Repositorio.cs" />
     <Compile Include="Repositorio\Multimidia\Mul_Autor_Repositorio.cs" />

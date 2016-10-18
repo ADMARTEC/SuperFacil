@@ -1,4 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Abstracao;
+using SuperFacil.Dominio.Modelos.Administracao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,16 @@ namespace SuperFacil.Dominio.Modelos.Global
     */
     public class Glo_Morada : Abs_Base
     {
+        public Glo_Morada()
+        {
+            this.Empresa = new List<Adm_Empresa>();
+        }
         #region - Propriedade -
         public int Morada_ID { get; set; }
         public int Empresa_ID { get; set; }
         public int Pais_ID { get; set; }
         #endregion
+
+        public virtual ICollection<Adm_Empresa> Empresa { get; set; }
     }
 }
