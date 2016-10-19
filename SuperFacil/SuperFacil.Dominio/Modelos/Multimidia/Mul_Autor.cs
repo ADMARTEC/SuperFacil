@@ -23,7 +23,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         #endregion
 
         #region Relacionamento
-        public virtual ICollection<Mul_Midia> Midia { get; set; }
+        public virtual Mul_Midia Midia { get; set; }
         public virtual ICollection<Mul_Biografia> Biografia { get; set; }
 
         #endregion
