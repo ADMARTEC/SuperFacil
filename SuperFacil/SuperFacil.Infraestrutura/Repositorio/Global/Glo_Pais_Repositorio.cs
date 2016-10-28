@@ -16,19 +16,19 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             db = _db;
         }
 
-        public Task<Glo_Pais> GetByID(int _Empresa, int value)
+        public Task<Glo_Pais> GetByID(int value)
         {
-            return db.Glo_Pais.Where(x => x.Empresa_ID == _Empresa && x.Pais_ID == value).FirstOrDefaultAsync();
+            return db.Glo_Pais.Where(x => x.Pais_ID == value).FirstOrDefaultAsync();
         }
 
-        public Task<Glo_Pais> GetByParent(int _Empresa, int value)
+        public Task<Glo_Pais> GetByParent(int value)
         {
-            return db.Glo_Pais.Where(x => x.Empresa_ID == _Empresa && x.Parent_ID == value).FirstOrDefaultAsync();
+            return db.Glo_Pais.Where(x => x.Parent_ID == value).FirstOrDefaultAsync();
         }
 
-        public Task<Glo_Pais> GetByDesignacao(int _Empresa, string value)
+        public Task<Glo_Pais> GetByDesignacao(string value)
         {
-            return db.Glo_Pais.Where(x => x.Empresa_ID == _Empresa && x.Designacao == value).FirstOrDefaultAsync();
+            return db.Glo_Pais.Where(x => x.Designacao == value).FirstOrDefaultAsync();
         }
 
         public async void Create(Glo_Pais pais)
@@ -44,6 +44,7 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
 
         public void Deleted(Glo_Pais pais)
         {
+
             Update(pais);
         }
 
@@ -52,7 +53,6 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             db.Dispose();
             GC.Collect();
         }
-
-
+ 
     }
 }

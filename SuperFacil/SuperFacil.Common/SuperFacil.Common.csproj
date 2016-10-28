@@ -56,6 +56,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res_Adm_Usuario.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Global\Res_Pais.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Pais.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Res_Base.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +85,10 @@
     <EmbeddedResource Include="Resource\Administracao\Res_Adm_Usuario.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Res_Adm_Usuario.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Global\Res_Pais.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Pais.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\Res_Base.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

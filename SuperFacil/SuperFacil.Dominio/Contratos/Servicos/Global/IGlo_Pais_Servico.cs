@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Servicos.Global
 {
-    public interface IGlo_Pais_Servico: IDisposable
-    {   
-        Task<Glo_Pais> GetRecursividade(int _Empresa, int value);
-        Task<Glo_Pais> GetDesignacao(int _Empresa, string value);
-       
-        void Guardar(Glo_Pais pais);
-        void Eliminado(Glo_Pais pais);
+    public interface IGlo_Pais_Servico : IDisposable
+    {
+        Glo_Pais GetRecursividade(int value);
+        Glo_Pais GetDesignacao(string value);
+        int GetUsuario(string value);
+
+        void Create(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
+        void Update(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
+        void Guardar(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
+
+        void Activacao(string _Pais, string _Usuario, bool _Activar);
+        void Eliminado(string _Pais, string _Usuario);
     }
 }

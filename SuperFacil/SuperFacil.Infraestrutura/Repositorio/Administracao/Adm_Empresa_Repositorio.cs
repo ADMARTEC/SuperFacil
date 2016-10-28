@@ -31,6 +31,11 @@ namespace SuperFacil.Infraestrutura.Repositorio.Administracao
             return db.Adm_Empresa.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == value).FirstOrDefaultAsync();
         }
 
+        public Task<Adm_Empresa> GetByDesignaca(string value)
+        {
+            return db.Adm_Empresa.Where(x => x.Designacao == value).FirstOrDefaultAsync();
+        }
+
         public async void Create(Adm_Empresa empresa)
         {
             db.Adm_Empresa.Add(empresa);
@@ -52,6 +57,6 @@ namespace SuperFacil.Infraestrutura.Repositorio.Administracao
         {
             db.Dispose();
             GC.Collect();
-        }
+        }        
     }
 }

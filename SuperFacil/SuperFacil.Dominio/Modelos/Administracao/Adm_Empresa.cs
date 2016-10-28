@@ -11,7 +11,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
 {
     /* 
      * Propriedades Abstratas a ter em conta:
-     * Designacao,NIF,Nota
+     * Designacao,NIF
      * Create,Update e Deleted  --- Nunca deve faltar em nenhuma classe
      */
     public class Adm_Empresa : Abs_Base
@@ -31,10 +31,10 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         /// </summary>
         public int Empresa_ID { get; set; }
         public int? Parent_ID { get; set; }
-        public int? Imagem_ID { get; set; }
         public int Contacto_ID { get; set; }
         public int Pais_ID { get; set; }
         public int Morada_ID { get; set; }
+        public int? Imagem_ID { get; set; }
         #endregion
 
         #region - Relacionamento -

@@ -41,6 +41,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\Administracao\Adm_Empresa_Servico.cs" />
+    <Compile Include="Servicos\Administracao\Adm_Perfil_Servico.cs" />
+    <Compile Include="Servicos\Administracao\Adm_Usuario_Servico.cs" />
+    <Compile Include="Servicos\Global\Glo_Contacto_Servico.cs" />
+    <Compile Include="Servicos\Global\Glo_Imagem_Servico.cs" />
+    <Compile Include="Servicos\Global\Glo_Morada_Servico.cs" />
+    <Compile Include="Servicos\Global\Glo_Pais_Servico.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Servicos\Multimidia\" />
+    <Folder Include="Servicos\Recursos_Humanos\" />
+    <Folder Include="Servicos\Sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
+      <Project>{986504B0-0549-47EF-9DF3-2732127FA49D}</Project>
+      <Name>SuperFacil.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperFacil.Dominio\SuperFacil.Dominio.csproj">
+      <Project>{D3A91213-B6E9-406D-847C-6E8D2DA76519}</Project>
+      <Name>SuperFacil.Dominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

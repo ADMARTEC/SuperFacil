@@ -22,11 +22,11 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public int Parent_ID { get; set; }
         #endregion
 
-        public void Set_Localizacao( String _Designacao, int _Empresa_ID)
+        public void Set_Localizacao(String _Designacao, int _Empresa_ID)
         {
-          AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
+            AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
             this.Designacao = _Designacao;
-            this.Empresa_ID =  _Empresa_ID;
+            this.Empresa_ID = _Empresa_ID;
         }
     }
 }

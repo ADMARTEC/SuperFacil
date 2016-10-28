@@ -97,6 +97,15 @@ namespace SuperFacil.Common.Resource.Administracao {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O usuario indicado não é valido.
+        /// </summary>
+        public static string TagUsuarioInvalido {
+            get {
+                return ResourceManager.GetString("TagUsuarioInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O nome do usuario não pode ser vazio.
         /// </summary>
         public static string TagUsuarioNull {

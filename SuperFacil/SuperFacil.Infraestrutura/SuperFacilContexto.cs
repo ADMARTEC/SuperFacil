@@ -11,18 +11,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Infraestrutura
-    {
+{
     public class SuperFacilContexto : DbContext
-        {
+    {
         #region - Construtor -
         public SuperFacilContexto() : base("SuperFacilConexaoString")
-            {
+        {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
 
             // Carregamento das informações predefinidas
             Database.SetInitializer(new SuperFacilInicializador());
-            }
+        }
         #endregion
 
         #region - Tabelas -
@@ -42,7 +42,7 @@ namespace SuperFacil.Infraestrutura
         /// </summary>
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-            {
+        {
             modelBuilder.Configurations.Add(new Adm_Empresa_Map());
             modelBuilder.Configurations.Add(new Adm_Perfil_Map());
             modelBuilder.Configurations.Add(new Adm_Usuario_Map());
@@ -53,7 +53,7 @@ namespace SuperFacil.Infraestrutura
 
 
             //base.OnModelCreating(modelBuilder);
-            }
-
         }
+
     }
+}

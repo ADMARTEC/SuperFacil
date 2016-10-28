@@ -42,36 +42,40 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Administracao
                 .HasColumnOrder(7)
                 .IsRequired();
 
+            Property(x => x.Imagem_ID)
+                .HasColumnOrder(8)
+                .IsOptional();
+
             Property(x => x.Activo)
-               .HasColumnOrder(8)
+               .HasColumnOrder(9)
                .IsRequired()
                .HasColumnType("bit");
 
             Property(x => x.CreateUser)
-               .HasColumnOrder(9)
+               .HasColumnOrder(10)
                .IsRequired();
 
             Property(x => x.CreateDate)
-               .HasColumnOrder(10)
+               .HasColumnOrder(11)
                .IsRequired()
                .HasColumnType("datetime");
 
             Property(x => x.UpdateUser)
-               .HasColumnOrder(11)
+               .HasColumnOrder(12)
                .IsRequired();
 
             Property(x => x.UpdateDate)
-               .HasColumnOrder(12)
+               .HasColumnOrder(13)
                .IsRequired()
                .HasColumnType("datetime");
 
             Property(x => x.Deleted)
-               .HasColumnOrder(13)
+               .HasColumnOrder(14)
                .IsRequired()
                .HasColumnType("bit");
 
             Property(x => x.Default)
-               .HasColumnOrder(14)
+               .HasColumnOrder(15)
                .IsRequired()
                .HasColumnType("bit");
         }

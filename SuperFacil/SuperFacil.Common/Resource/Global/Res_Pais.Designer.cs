@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperFacil.Common.Resource {
+namespace SuperFacil.Common.Resource.Global {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Res_Base {
+    public class Res_Pais {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Res_Base() {
+        internal Res_Pais() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Res_Base", typeof(Res_Base).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Global.Res_Pais", typeof(Res_Pais).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,20 @@ namespace SuperFacil.Common.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A designação não pode ser vazia.
+        ///   Looks up a localized string similar to Já existe um pais ou cidade com este nome.
         /// </summary>
-        public static string TagDesignacaoNull {
+        public static string TagPaisDuplicado {
             get {
-                return ResourceManager.GetString("TagDesignacaoNull", resourceCulture);
+                return ResourceManager.GetString("TagPaisDuplicado", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O nome não pode ser vazio.
+        ///   Looks up a localized string similar to O Pais ou cidade indicada não é valida.
         /// </summary>
-        public static string TagNomeNull {
+        public static string TagPaisInvalido {
             get {
-                return ResourceManager.GetString("TagNomeNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O nome deve ter de  8 á 250 letras.
-        /// </summary>
-        public static string TagNomeSize {
-            get {
-                return ResourceManager.GetString("TagNomeSize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to É obrigatório preencher o Sobrenome.
-        /// </summary>
-        public static string TagSobrenomeNull {
-            get {
-                return ResourceManager.GetString("TagSobrenomeNull", resourceCulture);
+                return ResourceManager.GetString("TagPaisInvalido", resourceCulture);
             }
         }
     }

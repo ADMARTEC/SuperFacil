@@ -19,6 +19,7 @@ namespace SuperFacil.Dominio.Modelos.Global
         {
             this.Empresa = new List<Adm_Empresa>();
         }
+      
         #region - Propriedade -  
         public int Contacto_ID { get; set; }
         public int Empresa_ID { get; set; }
