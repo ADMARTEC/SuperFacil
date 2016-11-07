@@ -23,14 +23,19 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Contacto_ID == value).FirstOrDefaultAsync();
         }
 
-        public Task<Glo_Contacto> GetByClass(int _Empresa, int _Class_ID, string _ClasseNome)
-        {
-            return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Class_ID == _Class_ID && x.Class_Nome == _ClasseNome).FirstOrDefaultAsync();
-        }
-
         public Task<Glo_Contacto> GetByTelefone(int _Empresa, int value)
         {
             return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Telefone == value).FirstOrDefaultAsync();
+        }
+
+        public Task<Glo_Contacto> GetByEmail(int _Empresa, string value)
+        {
+            return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Email == value).FirstOrDefaultAsync();
+        }
+
+        public Task<Glo_Contacto> GetByResponsavel(int _Empresa, string value)
+        {
+            return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Responsavel == value).FirstOrDefaultAsync();
         }
 
         public async void Create(Glo_Contacto contacto)
@@ -55,5 +60,7 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             db.Dispose();
             GC.Collect();
         }
+
+
     }
 }

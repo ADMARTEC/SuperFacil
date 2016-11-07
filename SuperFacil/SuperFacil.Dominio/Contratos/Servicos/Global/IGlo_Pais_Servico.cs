@@ -11,13 +11,13 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Global
     {
         Glo_Pais GetRecursividade(int value);
         Glo_Pais GetDesignacao(string value);
-        int GetUsuario(string value);
+        int GetUsuario(string value, string _Empresa = null);
 
         void Create(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
-        void Update(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
-        void Guardar(int? _Parent, string _Designacao, string _Usuario, bool _Default = false);
+        void Update(int? _Parent, string _Designacao, string _Usuario, bool _Activo, bool _Default = false);
+        void Save(int? _Parent, string _Designacao, string _Usuario, bool _Activo, bool _Default = false);
 
         void Activacao(string _Pais, string _Usuario, bool _Activar);
-        void Eliminado(string _Pais, string _Usuario);
+        void Delete(string _Pais, string _Usuario);
     }
 }

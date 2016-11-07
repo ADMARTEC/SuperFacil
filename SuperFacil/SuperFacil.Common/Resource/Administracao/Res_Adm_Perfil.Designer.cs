@@ -61,11 +61,38 @@ namespace SuperFacil.Common.Resource.Administracao {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O perfil não pode ser duplicado.
+        /// </summary>
+        public static string TagDuplicado {
+            get {
+                return ResourceManager.GetString("TagDuplicado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O perfil não é valido.
         /// </summary>
-        public static string TagPerfilInvalido {
+        public static string TagInvalido {
             get {
-                return ResourceManager.GetString("TagPerfilInvalido", resourceCulture);
+                return ResourceManager.GetString("TagInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O perfil  não foi encontrado.
+        /// </summary>
+        public static string TagNotFound {
+            get {
+                return ResourceManager.GetString("TagNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O subperfil não é valido.
+        /// </summary>
+        public static string TagParentInvlido {
+            get {
+                return ResourceManager.GetString("TagParentInvlido", resourceCulture);
             }
         }
     }

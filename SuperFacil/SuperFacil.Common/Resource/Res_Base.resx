@@ -120,6 +120,12 @@
   <data name="TagDesignacaoNull" xml:space="preserve">
     <value>A designação não pode ser vazia</value>
   </data>
+  <data name="TagNIFNotFound" xml:space="preserve">
+    <value>O NIF indicado não foi encontrado</value>
+  </data>
+  <data name="TagNIFNull" xml:space="preserve">
+    <value>O NIF não pode ser vazio</value>
+  </data>
   <data name="TagNomeNull" xml:space="preserve">
     <value>O nome não pode ser vazio</value>
   </data>

@@ -117,31 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TagCredencialInvalida" xml:space="preserve">
-    <value>O usuario ou senha é invalida</value>
-  </data>
-  <data name="TagSenhaDiferente" xml:space="preserve">
-    <value>As senhas são diferentes</value>
-  </data>
-  <data name="TagSenhaInvalida" xml:space="preserve">
-    <value>A senha não é valida</value>
-  </data>
-  <data name="TagSenhaNull" xml:space="preserve">
-    <value>A senha não pode ser vazia</value>
-  </data>
-  <data name="TagSenhaTamanho" xml:space="preserve">
-    <value>A senha deve ter de 6 a 20 caracteres</value>
-  </data>
-  <data name="TagUsuarioDuplicado" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TagUsuarioInvalido" xml:space="preserve">
-    <value>O usuario indicado não é valido</value>
-  </data>
-  <data name="TagUsuarioNull" xml:space="preserve">
-    <value>O nome do usuario não pode ser vazio</value>
-  </data>
-  <data name="TagUsuarioSize" xml:space="preserve">
-    <value>O nome do usuario deve ter de 4 a 20 caracteres</value>
+  <data name="TagInvalido" xml:space="preserve">
+    <value>O contacto não é valido</value>
   </data>
 </root>

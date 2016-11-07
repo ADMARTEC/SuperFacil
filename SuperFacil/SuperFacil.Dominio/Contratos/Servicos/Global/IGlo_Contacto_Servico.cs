@@ -9,12 +9,16 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Global
 {
     public interface IGlo_Contacto_Servico : IDisposable
     {
-        Glo_Contacto GetByID(int _Empresa, int value);
-        Glo_Contacto GetByTelefone(int _Empresa, int value);
-        Glo_Contacto GetByClass(int _Empresa, int _Class_ID, string _ClasseNome);
+        Glo_Contacto GetID(string _Empresa, int value);
+        Glo_Contacto GetTelefone(string _Empresa, int? value);
+        Glo_Contacto GetEmail(string _Empresa, string value);
+        Glo_Contacto GetResponsavel(string _Empresa, string value);
+        int GetEmpresa(string _Empresa);
+        int GetUsuario(string _Empresa, string value);
 
-        void Create(Glo_Contacto contacto);
-        void Update(Glo_Contacto contacto);
-        void Deleted(Glo_Contacto contacto);
+        void Create(string _Empresa, int? Parent, int? _Telefone, string _Email, string _Responsavel, bool _Master, string _CreateUser, bool _Default);
+        void Update(string _Empresa, int? Parent, int? _Telefone, string _Email, string _Responsavel, bool _Master, string _UpdateUser, bool _Activo, bool _Default);
+        void Save(string _Empresa, int? Parent, int? _Telefone, string _Email, string _Responsavel, bool _Master, string _User, bool _Activo, bool _Default);
+        void Delete(string _Empresa, int Contacto, string DeleteUser);
     }
 }

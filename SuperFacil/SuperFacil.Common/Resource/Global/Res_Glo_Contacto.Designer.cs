@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperFacil.Common.Resource {
+namespace SuperFacil.Common.Resource.Global {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Res_Base {
+    public class Res_Glo_Contacto {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Res_Base() {
+        internal Res_Glo_Contacto() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Res_Base", typeof(Res_Base).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Global.Res_Glo_Contacto", typeof(Res_Glo_Contacto).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,56 +61,11 @@ namespace SuperFacil.Common.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A designação não pode ser vazia.
+        ///   Looks up a localized string similar to O contacto não é valido.
         /// </summary>
-        public static string TagDesignacaoNull {
+        public static string TagInvalido {
             get {
-                return ResourceManager.GetString("TagDesignacaoNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O NIF indicado não foi encontrado.
-        /// </summary>
-        public static string TagNIFNotFound {
-            get {
-                return ResourceManager.GetString("TagNIFNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O NIF não pode ser vazio.
-        /// </summary>
-        public static string TagNIFNull {
-            get {
-                return ResourceManager.GetString("TagNIFNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O nome não pode ser vazio.
-        /// </summary>
-        public static string TagNomeNull {
-            get {
-                return ResourceManager.GetString("TagNomeNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to O nome deve ter de  8 á 250 letras.
-        /// </summary>
-        public static string TagNomeSize {
-            get {
-                return ResourceManager.GetString("TagNomeSize", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to É obrigatório preencher o Sobrenome.
-        /// </summary>
-        public static string TagSobrenomeNull {
-            get {
-                return ResourceManager.GetString("TagSobrenomeNull", resourceCulture);
+                return ResourceManager.GetString("TagInvalido", resourceCulture);
             }
         }
     }

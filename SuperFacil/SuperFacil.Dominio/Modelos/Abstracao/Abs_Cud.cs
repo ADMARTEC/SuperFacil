@@ -14,7 +14,7 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
         public DateTime CreateDate { get; set; }
         public int UpdateUser { get; set; }
         public DateTime UpdateDate { get; set; }
-        public bool? Deleted { get; set; }
+        public bool Deleted { get; set; }
 
         /// <summary>
         /// Este campo serve para indicar se o dado é padrão caso seja não deve ser eliminado.
@@ -35,16 +35,7 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
             this.Default = _Default;
         }
 
-        public void Set_Cud(bool _Activo, int _UpdateUser, DateTime _UpdateDate, bool _Deleted, bool _Default)
-        {
-            this.Activo = _Activo;
-            this.UpdateUser = _UpdateUser;
-            this.UpdateDate = _UpdateDate;
-            this.Deleted = _Deleted;
-            this.Default = _Default;
-        }
-
-        public void Set_Cud(bool _Activo, int _UpdateUser, DateTime _UpdateDate, bool _Default)
+        public void Set_Cud_Update(bool _Activo, int _UpdateUser, DateTime _UpdateDate, bool _Default)
         {
             this.Activo = _Activo;
             this.UpdateUser = _UpdateUser;
@@ -52,7 +43,14 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
             this.Default = _Default;
         }
 
-        public void Set_Cud(int _Usuario, DateTime _CreateDate,bool _Default)
+        public void Set_Cud_Update(bool _Activo, int _UpdateUser, DateTime _UpdateDate)
+        {
+            this.Activo = _Activo;
+            this.UpdateUser = _UpdateUser;
+            this.UpdateDate = _UpdateDate;      
+        }
+
+        public void Set_Cud_Create(int _Usuario, DateTime _CreateDate, bool _Default)
         {
             this.Activo = true;
             this.CreateUser = _Usuario;
@@ -63,17 +61,11 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
             this.Default = _Default;
         }
 
-        /// <summary>
-        /// Usado quando queremos eliminar dados
-        /// </summary>
-        /// <param name="_Usuario"></param>
-        /// <param name="_CreateDate"></param>
-        /// <param name="_Delete"></param>
-        public void Set_Cud(int _Usuario, DateTime _CreateDate, bool? _Delete=true)
-        {   
+        public void Set_Cud_Delete(int _Usuario, DateTime _CreateDate, bool _Delete = true)
+        {
             this.UpdateUser = _Usuario;
             this.UpdateDate = _CreateDate;
-            this.Deleted = _Delete;           
+            this.Deleted = _Delete;
         }
 
         #endregion

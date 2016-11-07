@@ -63,6 +63,10 @@
       <Project>{D3A91213-B6E9-406D-847C-6E8D2DA76519}</Project>
       <Name>SuperFacil.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SuperFacil.Infraestrutura\SuperFacil.Infraestrutura.csproj">
+      <Project>{1972B967-7015-49C4-BB98-4BCD6394A60A}</Project>
+      <Name>SuperFacil.Infraestrutura</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -24,7 +24,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public int Perfil_ID { get; set; }
         public int Empresa_ID { get; set; }
         public int? Parent_ID { get; set; }
-        public int HorarioAcesso_ID { get; set; }
+        public int? HorarioAcesso_ID { get; set; }
         #endregion
 
         #region - Relacionamento -
@@ -34,7 +34,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         #endregion
 
         #region - Metodos -
-        public void Set_Perfil(int _Empresa_ID, int _HorarioAcesso_ID, string _Designacao, int? _Parent_ID = null)
+        public void Set_Perfil(int _Empresa_ID, int? _HorarioAcesso_ID, string _Designacao, int? _Parent_ID = null)
         {
             AssertionConcern.AssertArgumentNotNull(_Designacao, Res_Base.TagDesignacaoNull);
             AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);

@@ -1,11 +1,10 @@
-﻿using SuperFacil.Dominio.Modelos.Abstracao;
+﻿using SuperFacil.Common.Resource;
+using SuperFacil.Common.Resource.Administracao;
+using SuperFacil.Common.Validacao;
+using SuperFacil.Dominio.Modelos.Abstracao;
 using SuperFacil.Dominio.Modelos.Global;
 using SuperFacil.Dominio.Modelos.Sistema;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Administracao
 {
@@ -45,6 +44,24 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public virtual Glo_Contacto Contacto { get; set; }
         public virtual Glo_Morada Morada { get; set; }
         public virtual Glo_Pais Pais { get; set; }
+        #endregion
+
+        #region - Metodos -        
+        public void Set_Empresa(int? _Parent, string _Designacao, string _NIF, int _Contacto, int _Pais, int _Morada, int? _Imagem)
+        {
+            AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Adm_Empresa.TagNull);
+            AssertionConcern.AssertArgumentNotNull(_Designacao, Res_Adm_Empresa.TagNull);
+            AssertionConcern.AssertArgumentNotNull(_NIF, Res_Base.TagNIFNull);
+            AssertionConcern.AssertArgumentNotEmpty(_NIF, Res_Base.TagNIFNull);
+
+            this.Parent_ID = _Parent;
+            this.Designacao = _Designacao;
+            this.NIF = _NIF;
+            this.Contacto_ID = _Contacto;
+            this.Pais_ID = _Pais;
+            this.Morada_ID = _Morada;
+            this.Imagem_ID = _Imagem;
+        }
         #endregion
     }
 }

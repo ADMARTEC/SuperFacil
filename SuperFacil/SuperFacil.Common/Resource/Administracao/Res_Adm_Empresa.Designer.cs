@@ -61,11 +61,29 @@ namespace SuperFacil.Common.Resource.Administracao {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empresa duplicada.
+        /// </summary>
+        public static string TagDuplicado {
+            get {
+                return ResourceManager.GetString("TagDuplicado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A empresa não é valida.
         /// </summary>
-        public static string TagEmpresaInvalida {
+        public static string TagInvalida {
             get {
-                return ResourceManager.GetString("TagEmpresaInvalida", resourceCulture);
+                return ResourceManager.GetString("TagInvalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nome da empresa não pode ser vazio.
+        /// </summary>
+        public static string TagNull {
+            get {
+                return ResourceManager.GetString("TagNull", resourceCulture);
             }
         }
     }

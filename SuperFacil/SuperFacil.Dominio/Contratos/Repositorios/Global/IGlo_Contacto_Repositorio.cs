@@ -1,8 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Global;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Repositorios.Global
@@ -11,7 +8,9 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Global
     {
         Task<Glo_Contacto> GetByID(int _Empresa, int value);
         Task<Glo_Contacto> GetByTelefone(int _Empresa, int value);
-        Task<Glo_Contacto> GetByClass(int _Empresa, int _Class_ID, string _ClasseNome);
+        Task<Glo_Contacto> GetByEmail(int _Empresa, string value);
+        Task<Glo_Contacto> GetByResponsavel(int _Empresa, string value);
+
 
         void Create(Glo_Contacto contacto);
         void Update(Glo_Contacto contacto);

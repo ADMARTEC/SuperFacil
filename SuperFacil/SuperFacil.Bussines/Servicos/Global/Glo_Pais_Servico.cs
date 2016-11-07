@@ -9,6 +9,7 @@ using SuperFacil.Dominio.Contratos.Repositorios.Global;
 using SuperFacil.Dominio.Modelos.Administracao;
 using SuperFacil.Common.Resource.Global;
 using SuperFacil.Common.Resource.Administracao;
+using SuperFacil.Bussines.Servicos.Administracao;
 
 namespace SuperFacil.Bussines.Servicos.Global
 {
@@ -36,15 +37,20 @@ namespace SuperFacil.Bussines.Servicos.Global
             return _repositorio.GetByParent(value).Result;
         }
 
-        public int GetUsuario(string value)
+        public int GetUsuario(string value, string _Empresa = null)
         {
-            // Esta função deve ser completa com a conclusao do usuario.
-            var user = new Adm_Usuario();
+            return new Adm_Usuario_Servico().GetUsuario(_Empresa, value).Usuario_ID;
+        }
 
-            if (user == null)
-                throw new Exception(Res_Adm_Usuario.TagUsuarioInvalido);
+        public void Activacao(string _Pais, string _Usuario, bool _Activar)
+        {
+            int user = GetUsuario(_Usuario);
 
-            return user.Usuario_ID;
+            var result = GetDesignacao(_Pais);
+
+            result.Set_Cud_Update(_Activar, user, DateTime.Now);
+
+            _repositorio.Update(result);
         }
 
         public void Create(int? _Parent, string _Designacao, string _Usuario, bool _Default = false)
@@ -57,41 +63,42 @@ namespace SuperFacil.Bussines.Servicos.Global
                 throw new Exception(Res_Pais.TagPaisDuplicado);
 
             result.Set_Pais(_Designacao, _Parent);
-            result.Set_Cud(user, DateTime.Now, _Default);
+            result.Set_Cud_Create(user, DateTime.Now, _Default);
 
             _repositorio.Create(result);
         }
 
-        public void Update(int? _Parent, string _Designacao, string _Usuario, bool _Default = false)
+        public void Update(int? _Parent, string _Designacao, string _Usuario, bool _Activo, bool _Default = false)
         {
-            int user = GetUsuario(_Usuario);
-
             var result = GetDesignacao(_Designacao);
 
             result.Set_Pais(_Designacao, _Parent);
-            result.Set_Cud(user, DateTime.Now);
+            result.Set_Cud_Update(_Activo, GetUsuario(_Usuario), DateTime.Now, _Default);
 
             _repositorio.Update(result);
         }
 
-        public void Activacao(string _Pais, string _Usuario, bool _Activar)
+        public void Save(int? _Parent, string _Designacao, string _Usuario, bool _Activo, bool _Default = false)
+        {
+            var result = GetDesignacao(_Designacao);
+
+            if (result != null)
+            {
+                Update(_Parent, _Designacao, _Usuario, _Activo, _Default);
+            }
+            else
+            {
+                Create(_Parent, _Designacao, _Usuario, _Default);
+            }
+        }
+
+        public void Delete(string _Pais, string _Usuario)
         {
             int user = GetUsuario(_Usuario);
 
             var result = GetDesignacao(_Pais);
 
-            result.Set_Cud(_Activar, user, DateTime.Now,false);
-
-            _repositorio.Update(result);
-        }
-
-        public void Eliminado(string _Pais, string _Usuario)
-        {
-            int user = GetUsuario(_Usuario);
-
-            var result = GetDesignacao(_Pais);
-
-            result.Set_Cud(user, DateTime.Now);
+            result.Set_Cud_Delete(user, DateTime.Now);
 
             _repositorio.Deleted(result);
         }
@@ -102,27 +109,6 @@ namespace SuperFacil.Bussines.Servicos.Global
             GC.Collect();
         }
 
-        /// <summary>
-        /// Criar ou actualizar dados do pais
-        /// </summary>
-        /// <param name="_Parent"></param>
-        /// <param name="_Designacao"></param>
-        /// <param name="_Usuario"></param>      
-        /// <param name="_Default"></param>
-        public void Guardar(int? _Parent, string _Designacao, string _Usuario, bool _Default = false)
-        {
-            var result = GetDesignacao(_Designacao);
 
-            if (result.Pais_ID > 0)
-            {
-                Update(_Parent, _Designacao, _Usuario, _Default);
-            }
-            else
-            {
-                Create(_Parent, _Designacao, _Usuario, _Default);
-            }
-        }
-
-    
     }
 }

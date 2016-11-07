@@ -15,6 +15,17 @@ namespace SuperFacil.Dominio.Modelos.Administracao
     */
     public class Adm_Usuario : Abs_Base
     {
+        #region - Construtor -
+        protected Adm_Usuario() { }     
+
+        public Adm_Usuario(string _Usuario, string _Senha)
+        {
+            this.Usuario_login = _Usuario;
+            this.Senha = _Senha;
+        }
+
+        #endregion
+
         #region - Propriedade -
         public int Usuario_ID { get; set; }
         public int Empresa_ID { get; set; } // Referencia a tabela de Empresa
@@ -81,6 +92,14 @@ namespace SuperFacil.Dominio.Modelos.Administracao
 
             // Esta atribuição será feito somente se as condições a cima forem validas
             this.Senha = _senha;
+        }
+
+        public string Set_Reset_Senha()
+        {
+            string senha = Guid.NewGuid().ToString().Substring(0, 8);
+            this.Senha = PasswordAssertionConcern.Encrypt(senha);
+
+            return senha;
         }
 
         public void Auto_Validar()

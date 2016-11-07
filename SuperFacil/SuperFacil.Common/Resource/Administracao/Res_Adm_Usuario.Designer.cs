@@ -61,6 +61,15 @@ namespace SuperFacil.Common.Resource.Administracao {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O usuario ou senha é invalida.
+        /// </summary>
+        public static string TagCredencialInvalida {
+            get {
+                return ResourceManager.GetString("TagCredencialInvalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to As senhas são diferentes.
         /// </summary>
         public static string TagSenhaDiferente {
@@ -93,6 +102,15 @@ namespace SuperFacil.Common.Resource.Administracao {
         public static string TagSenhaTamanho {
             get {
                 return ResourceManager.GetString("TagSenhaTamanho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string TagUsuarioDuplicado {
+            get {
+                return ResourceManager.GetString("TagUsuarioDuplicado", resourceCulture);
             }
         }
         
