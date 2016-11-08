@@ -13,6 +13,7 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Global
         Glo_Contacto GetTelefone(string _Empresa, int? value);
         Glo_Contacto GetEmail(string _Empresa, string value);
         Glo_Contacto GetResponsavel(string _Empresa, string value);
+        Glo_Contacto GetTeleEmail(string _Empresa,int _Telefone, string _Email);
         int GetEmpresa(string _Empresa);
         int GetUsuario(string _Empresa, string value);
 

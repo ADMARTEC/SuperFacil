@@ -61,11 +61,29 @@ namespace SuperFacil.Common.Resource.Global {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O contacto não pode ser duplicado.
+        /// </summary>
+        public static string TagDuplicado {
+            get {
+                return ResourceManager.GetString("TagDuplicado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O contacto não é valido.
         /// </summary>
         public static string TagInvalido {
             get {
                 return ResourceManager.GetString("TagInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O telefone ou email não foi encontrado.
+        /// </summary>
+        public static string TagNotFound {
+            get {
+                return ResourceManager.GetString("TagNotFound", resourceCulture);
             }
         }
     }

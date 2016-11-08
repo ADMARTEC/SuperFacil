@@ -10,6 +10,8 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Global
         Task<Glo_Contacto> GetByTelefone(int _Empresa, int value);
         Task<Glo_Contacto> GetByEmail(int _Empresa, string value);
         Task<Glo_Contacto> GetByResponsavel(int _Empresa, string value);
+        Task<Glo_Contacto> GetByTelefoneEmail(int _Empresa, int _Telefone, string _Email);
+
 
 
         void Create(Glo_Contacto contacto);

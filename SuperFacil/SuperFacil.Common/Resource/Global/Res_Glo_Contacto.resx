@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TagDuplicado" xml:space="preserve">
+    <value>O contacto não pode ser duplicado</value>
+  </data>
   <data name="TagInvalido" xml:space="preserve">
     <value>O contacto não é valido</value>
+  </data>
+  <data name="TagNotFound" xml:space="preserve">
+    <value>O telefone ou email não foi encontrado</value>
   </data>
 </root>

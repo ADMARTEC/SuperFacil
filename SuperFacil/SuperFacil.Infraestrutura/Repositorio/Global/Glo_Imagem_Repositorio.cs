@@ -1,11 +1,9 @@
 ﻿using SuperFacil.Dominio.Contratos.Repositorios.Global;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SuperFacil.Dominio.Modelos.Global;
+using System;
 using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuperFacil.Infraestrutura.Repositorio.Global
 {
@@ -17,6 +15,7 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
         {
             db = _db;
         }
+
         public Task<Glo_Imagem> GetByID(int value)
         {
             return db.Glo_Imagem.Where(x => x.Imagem_ID == value).FirstOrDefaultAsync();
@@ -25,6 +24,16 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
         public Task<Glo_Imagem> GetByID(int Empresa, int value)
         {
             return db.Glo_Imagem.Where(x => x.Empresa_ID == Empresa && x.Imagem_ID == value).FirstOrDefaultAsync();
+        }
+
+        public Task<Glo_Imagem> GetByLastID(int Empresa)
+        {
+            return db.Glo_Imagem.Where(x => x.Empresa_ID == Empresa).MaxAsync();
+        }
+
+        public Task<Glo_Imagem> GetByDesignacao(int Empresa, string value)
+        {
+            return db.Glo_Imagem.Where(x => x.Empresa_ID == Empresa && x.Designacao == value).FirstOrDefaultAsync();
         }
 
         public async void Create(Glo_Imagem imagem)
@@ -48,6 +57,6 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
         {
             db.Dispose();
             GC.Collect();
-        }
+        }   
     }
 }

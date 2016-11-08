@@ -38,6 +38,11 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Responsavel == value).FirstOrDefaultAsync();
         }
 
+        public Task<Glo_Contacto> GetByTelefoneEmail(int _Empresa, int _Telefone, string _Email)
+        {
+            return db.Glo_Contacto.Where(x => x.Empresa_ID == _Empresa && x.Telefone == _Telefone || x.Email == _Email).FirstOrDefaultAsync();
+        }
+
         public async void Create(Glo_Contacto contacto)
         {
             db.Glo_Contacto.Add(contacto);
@@ -61,6 +66,6 @@ namespace SuperFacil.Infraestrutura.Repositorio.Global
             GC.Collect();
         }
 
-
+       
     }
 }

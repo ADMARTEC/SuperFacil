@@ -11,6 +11,9 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Global
     {
         Task<Glo_Imagem> GetByID(int value);
         Task<Glo_Imagem> GetByID(int Empresa, int value);
+        Task<Glo_Imagem> GetByLastID(int Empresa);
+        Task<Glo_Imagem> GetByDesignacao(int Empresa, string value);
+
 
         void Create(Glo_Imagem imagem);
         void Update(Glo_Imagem imagem);

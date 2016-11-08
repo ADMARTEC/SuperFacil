@@ -1,10 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Abstracao;
 using SuperFacil.Dominio.Modelos.Administracao;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Global
 {
@@ -15,11 +10,6 @@ namespace SuperFacil.Dominio.Modelos.Global
     */
     public class Glo_Imagem : Abs_Base
     {
-        public Glo_Imagem()
-        {
-
-        }
-
         public int Imagem_ID { get; set; }
         public int Empresa_ID { get; set; }
 
