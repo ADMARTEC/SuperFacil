@@ -34,48 +34,5 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         // O Estado ira definir se a faixa ou musica esta a ser executada ou não...
         public string Estado { get; set; }
         #endregion
-
-        #region Relacionamento
-        public virtual Adm_Empresa Empresa { get; set; }
-        public virtual Mul_Autor Autor { get; set; }
-        #endregion
-
-        #region - Metodos -
-        /// <summary>
-        /// Atribuição dos dados completos da midia
-        /// </summary>
-        /// <param name="_Empresa"></param>
-        /// <param name="_Localizacao"></param>
-        /// <param name="_Parent"></param>
-        /// <param name="_Autor"></param>
-        /// <param name="_Ano_Lancamento"></param>
-        /// <param name="_Editora"></param>
-        /// <param name="_Faixa"></param>
-        /// <param name="_Duracao"></param>
-        /// <param name="_Tag"></param>
-        /// <param name="_Estado"></param>
-        /// <param name="_Designacao"></param>
-
-        public void Set_Midia(int _Empresa, int _Localizacao, int _Autor, DateTime _Ano_Lancamento,
-                              string _Editora, string _Duracao, string _Tag, string _Estado,
-                              string _Designacao, int? _Parent = null, int? _Faixa = null)
-        {
-
-            AssertionConcern.AssertArgumentNotNull(_Designacao, Res_Base.TagDesignacaoNull);
-            AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);
-
-            this.Empresa_ID = _Empresa;
-            this.Localizacao_ID = _Localizacao;
-            this.Parent_ID = _Parent;
-            this.Autor_ID = _Autor;
-            this.Ano_Lancamento = _Ano_Lancamento;
-            this.Editora = _Editora;
-            this.Faixa = _Faixa;
-            this.Duracao = _Duracao;
-            this.Tag = _Tag;
-            this.Estado = _Estado;
-            this.Designacao = _Designacao;
-        }
-        #endregion
     }
 }
