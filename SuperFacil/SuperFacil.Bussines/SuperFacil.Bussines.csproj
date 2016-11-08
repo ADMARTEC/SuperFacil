@@ -51,9 +51,10 @@
     <Compile Include="Servicos\Global\Glo_Imagem_Servico.cs" />
     <Compile Include="Servicos\Global\Glo_Morada_Servico.cs" />
     <Compile Include="Servicos\Global\Glo_Pais_Servico.cs" />
+    <Compile Include="Servicos\Multimidia\Mul_Autor_Servico.cs" />
+    <Compile Include="Servicos\Multimidia\Mul_Midia_Servico.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Servicos\Multimidia\" />
     <Folder Include="Servicos\Recursos_Humanos\" />
     <Folder Include="Servicos\Sistema\" />
   </ItemGroup>

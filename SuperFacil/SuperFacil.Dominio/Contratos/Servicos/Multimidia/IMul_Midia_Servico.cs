@@ -12,6 +12,8 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Multimidia
     {
         Mul_Midia GetByMidia_ID(int Empresa, int value);
         Mul_Midia GetByDesignacao(int Empresa, string value);
+        int GetLocalizacao(int Empresa, int value);
+        int GetAutor(int Empresa, int value);
         void Registrar(Mul_Midia midia);
 
     }
