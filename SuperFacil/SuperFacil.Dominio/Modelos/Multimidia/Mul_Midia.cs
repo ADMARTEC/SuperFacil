@@ -18,6 +18,10 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
     */
     public class Mul_Midia : Abs_Base
         {
+        #region Construtor
+        protected Mul_Midia() { }
+        #endregion
+
         #region Propriedade
         public int Midia_ID { get; set; }
         public int Empresa_ID { get; set; }
@@ -37,10 +41,13 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
 
         #region Relacionamento
         public virtual Mul_Autor Autor { get; set; }
+        public virtual Mul_Localizacao Localizacao { get; set; }
         #endregion
 
+        #region Metodos
+        //Metodo para salvar midia com todos os campos.
         public void Set_Midia(string _Designacao, int _Empresa_ID, int _Localizacao_ID, int? _Parent_ID, int _Autor_ID, DateTime _AnoLancamento,
-                              string _Editora, int? _Faixa, string _Tag, string _Estado)
+                      string _Editora, int? _Faixa, string _Tag, string _Estado)
             {
             AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
             AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);
@@ -55,5 +62,23 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
             this.Faixa = _Faixa;
             this.Tag = _Tag;
             }
+
+        // Metodos para slvar midia sem os campos menos importantes.
+        public void Set_Midia(string _Designacao, int _Empresa_ID, int _Localizacao_ID, int? _Parent_ID, int _Autor_ID, int? _Faixa)
+            {
+            AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
+            AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);
+
+            this.Designacao = _Designacao;
+            this.Empresa_ID = _Empresa_ID;
+            this.Localizacao_ID = _Localizacao_ID;
+            this.Parent_ID = _Parent_ID;
+            this.Autor_ID = _Autor_ID;
+            this.Faixa = _Faixa;
+
+            }
+
+        #endregion
+
         }
     }

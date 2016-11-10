@@ -16,6 +16,10 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
      */
     public class Mul_Biografia : Abs_Base
         {
+        #region Construtor
+        protected Mul_Biografia() { }
+        #endregion
+
         #region - Propriedade -
         public int Biografia_ID { get; set; }
         public int Empresa_ID { get; set; }
@@ -25,13 +29,14 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         public virtual Mul_Autor Autor { get; set; }
         #endregion
 
-        public void Set_Biografia(String _Designacao, int Autor_ID, int _Empresa_ID)
+        #region Metodos
+        public void Set_Biografia(string _Designacao, int _Empresa_ID)
             {
             AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
             this.Designacao = _Designacao;
             this.Empresa_ID = _Empresa_ID;
-
             }
+        #endregion
 
         }
 

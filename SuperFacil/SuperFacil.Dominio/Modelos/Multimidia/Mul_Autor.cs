@@ -36,6 +36,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
 
         #endregion
 
+        #region Metodos
         public void Set_Autor(int _Empresa_ID, string _Nome, string _Sobrenome, string _Alcunha, int? _Biografia_ID = null)
             {
             AssertionConcern.AssertArgumentNotNull(_Nome, Res_Base.TagNomeNull);
@@ -49,6 +50,8 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
             this.Alcunha = _Alcunha;
             this.Biografia_ID = _Biografia_ID;
             }
+        #endregion
+
 
         }
     }
