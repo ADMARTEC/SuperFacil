@@ -72,6 +72,7 @@
     <Compile Include="Contratos\Servicos\Global\IGlo_Pais_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Autor_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Biografia_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Multimidia\IMul_Localizacao_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
