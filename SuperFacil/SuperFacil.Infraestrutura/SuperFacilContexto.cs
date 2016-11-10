@@ -11,23 +11,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Infraestrutura
-{
-    public class SuperFacilContexto : DbContext
     {
+    public class SuperFacilContexto : DbContext
+        {
         #region - Construtor -
         public SuperFacilContexto() : base("SuperFacilConexaoString")
-        {
+            {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
 
             // Carregamento das informações predefinidas
             Database.SetInitializer(new SuperFacilInicializador());
-        }
+            }
         #endregion
 
         #region - Tabelas -
         public DbSet<Adm_Usuario> Adm_Usuario { get; set; }
+        #region Multimidia
         public DbSet<Mul_Midia> Mul_Midia { get; set; }
+        public DbSet<Mul_Biografia> Mul_Biografia { get; set; }
+        public DbSet<Mul_Localizacao> Mul_Localizacao { get; set; }
+        public DbSet<Mul_Autor> Mul_Autor { get; set; }
+        #endregion
         public DbSet<Adm_Empresa> Adm_Empresa { get; set; }
         public DbSet<Adm_Perfil> Adm_Perfil { get; set; }
         public DbSet<Glo_Pais> Glo_Pais { get; set; }
@@ -42,7 +47,7 @@ namespace SuperFacil.Infraestrutura
         /// </summary>
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+            {
             modelBuilder.Configurations.Add(new Adm_Empresa_Map());
             modelBuilder.Configurations.Add(new Adm_Perfil_Map());
             modelBuilder.Configurations.Add(new Adm_Usuario_Map());
@@ -53,7 +58,7 @@ namespace SuperFacil.Infraestrutura
 
 
             //base.OnModelCreating(modelBuilder);
-        }
+            }
 
+        }
     }
-}

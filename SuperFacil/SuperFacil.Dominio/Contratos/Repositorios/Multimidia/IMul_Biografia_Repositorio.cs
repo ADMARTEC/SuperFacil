@@ -11,7 +11,6 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         {
         #region SELECT - R
         Task<Mul_Biografia> GetByID(int Empresa, int value);
-        Task<Mul_Biografia> GetByAutor_ID(int Empresa, int value);
         Task<Mul_Biografia> GetByDesiginacao(int Empresa, string value);
         #endregion
 

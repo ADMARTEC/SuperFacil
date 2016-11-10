@@ -69,6 +69,8 @@
     <Compile Include="Repositorio\Global\Glo_Morada_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Pais_Repositorio.cs" />
     <Compile Include="Repositorio\Multimidia\Mul_Autor_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Biografia_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Localizacao_Repositorio.cs" />
     <Compile Include="Repositorio\Multimidia\Mul_Midia_Repositorio.cs" />
     <Compile Include="SuperFacilContexto.cs" />
     <Compile Include="SuperFacilInicializador.cs" />
