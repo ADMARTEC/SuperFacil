@@ -61,6 +61,7 @@
     <Compile Include="Contratos\Repositorios\Global\IGlo_Pais_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Autor_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Biografia_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Localizacao_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Empresa_Servico.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Perfil_Servico.cs" />
