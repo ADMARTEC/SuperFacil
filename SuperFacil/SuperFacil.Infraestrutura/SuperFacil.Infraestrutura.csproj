@@ -56,6 +56,9 @@
     <Compile Include="Mapeamento\Global\Glo_Imagem_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Morada_Map.cs" />
     <Compile Include="Mapeamento\Global\Glo_Pais_Map.cs" />
+    <Compile Include="Mapeamento\Multimidia\Mul_Autor_Map.cs" />
+    <Compile Include="Mapeamento\Multimidia\Mul_Biografia_Map.cs" />
+    <Compile Include="Mapeamento\Multimidia\Mul_Localizacao_Map.cs" />
     <Compile Include="Mapeamento\Multimidia\Mul_Midia_Map.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\Administracao\Adm_Perfil_Repositorio.cs" />
@@ -66,6 +69,8 @@
     <Compile Include="Repositorio\Global\Glo_Morada_Repositorio.cs" />
     <Compile Include="Repositorio\Global\Glo_Pais_Repositorio.cs" />
     <Compile Include="Repositorio\Multimidia\Mul_Autor_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Biografia_Repositorio.cs" />
+    <Compile Include="Repositorio\Multimidia\Mul_Localizacao_Repositorio.cs" />
     <Compile Include="Repositorio\Multimidia\Mul_Midia_Repositorio.cs" />
     <Compile Include="SuperFacilContexto.cs" />
     <Compile Include="SuperFacilInicializador.cs" />

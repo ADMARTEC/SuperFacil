@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
     {
-    public interface IMul_Biografia_Repositorio : IDisposable
+    public interface IMul_Localizacao_Repositorio : IDisposable
         {
         #region SELECT - R
-        Task<Mul_Biografia> GetByID(int Empresa, int value);
-        Task<Mul_Biografia> GetByDesiginacao(int Empresa, string value);
+        Task<Mul_Localizacao> GetByID(int Empresa, int value);
         #endregion
 
         #region CUD
-        void Create(Mul_Biografia biografia);
-        void Update(Mul_Biografia biografia);
-        void Deleted(Mul_Biografia biografia);
+        void Create(Mul_Localizacao localizacao);
+        void Update(Mul_Localizacao localizacao);
+        void Deleted(Mul_Localizacao localizacao);
         #endregion
         }
     }

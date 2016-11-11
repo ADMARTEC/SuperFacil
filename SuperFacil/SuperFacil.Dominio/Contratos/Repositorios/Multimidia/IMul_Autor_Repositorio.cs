@@ -12,6 +12,7 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         #region SELECT - R
         Task<Mul_Autor> GetByID(int Empresa, int value);
         Task<Mul_Autor> GetByDesiginacao(int Empresa, string value);
+        Task<Mul_Autor> GetByBiografiaID(int Empresa, int value);
         #endregion
 
         #region CUD

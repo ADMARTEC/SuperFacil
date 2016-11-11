@@ -8,27 +8,36 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Multimidia
-{
+    {
     /*
      * Propriedades Abstratas a ter em conta:
      * Descrição, Notas
      * * Create,Update e Deleted * --- Nunca deve faltar em nenhuma classe
      */
     public class Mul_Biografia : Abs_Base
-    {
+        {
+        #region Construtor
+        protected Mul_Biografia() { }
+        #endregion
+
         #region - Propriedade -
         public int Biografia_ID { get; set; }
         public int Empresa_ID { get; set; }
         #endregion
 
-        public void Set_Biografia(String _Designacao, int Autor_ID, int _Empresa_ID)
-        {
+        #region Relacionamento
+        public virtual Mul_Autor Autor { get; set; }
+        #endregion
+
+        #region Metodos
+        public void Set_Biografia(string _Designacao, int _Empresa_ID)
+            {
             AssertionConcern.AssertArgumentLength(_Designacao, 500, Res_Base.TagNomeSize);
             this.Designacao = _Designacao;
             this.Empresa_ID = _Empresa_ID;
-           
+            }
+        #endregion
+
         }
 
     }
-
-}
