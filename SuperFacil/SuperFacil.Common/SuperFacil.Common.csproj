@@ -61,6 +61,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res_Glo_Contacto.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resource\Global\Res_Glo_Imagem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Glo_Imagem.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Global\Res_Glo_Morada.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Glo_Morada.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resource\Global\Res_Pais.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +104,14 @@
     <EmbeddedResource Include="Resource\Global\Res_Glo_Contacto.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Res_Glo_Contacto.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Global\Res_Glo_Imagem.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Glo_Imagem.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Global\Res_Glo_Morada.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Glo_Morada.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\Global\Res_Pais.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -30,5 +30,9 @@ namespace SuperFacil.Dominio.Modelos.Global
         public virtual ICollection<Adm_Empresa> Empresa { get; set; }
         public virtual ICollection<Glo_Pais> Pais { get; set; }
 
+        public void Set_Morada(int _Empresa, int _Pais, string _Designacao)
+        {
+
+        }
     }
 }

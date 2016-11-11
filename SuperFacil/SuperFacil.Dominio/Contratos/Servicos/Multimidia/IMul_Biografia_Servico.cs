@@ -12,6 +12,9 @@ namespace SuperFacil.Dominio.Contratos.Servicos.Multimidia
         Mul_Biografia GetByID(int Empresa, int value);
         Mul_Biografia GetByAutor_ID(int Empresa, int value);
         Mul_Biografia GetByDesignacao(int Empresa, string value);
+        int GetEmpresa(string _Empresa);
+        int GetUsuario(string _Empresa, string _Usuario);
+
         void Registrar(Mul_Biografia biografia);
         }
     }

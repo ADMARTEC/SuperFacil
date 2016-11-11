@@ -2,7 +2,7 @@
 
 namespace SuperFacil.Dominio.Modelos.Abstracao
 {
-    public class Abs_Pessoa: Abs_Identificadores
+    public class Abs_Pessoa
     {
         public string Nome { get; set; }
         public string Sobrenome { get; set; }

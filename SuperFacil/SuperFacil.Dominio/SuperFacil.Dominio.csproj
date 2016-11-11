@@ -41,9 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing">
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,7 +71,6 @@
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Identificadores.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
     <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />

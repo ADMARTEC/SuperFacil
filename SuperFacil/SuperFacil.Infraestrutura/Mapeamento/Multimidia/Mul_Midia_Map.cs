@@ -1,4 +1,5 @@
-﻿using SuperFacil.Dominio.Modelos.Multimidia;
+﻿
+using SuperFacil.Dominio.Modelos.Multimidia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

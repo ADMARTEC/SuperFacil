@@ -16,6 +16,12 @@ namespace SuperFacil.Dominio.Modelos.Global
         public virtual Adm_Usuario Usuario { get; set; }
         public virtual Adm_Empresa Empresa { get; set; }
 
+        public void Set_Imagem(int _Empresa, string _Designacao)
+        {
+            this.Empresa_ID = _Empresa;
+            this.Designacao = _Designacao;
+        }
+
 
     }
 }
