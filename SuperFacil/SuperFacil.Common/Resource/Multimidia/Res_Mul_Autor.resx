@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TagAlcunhaInvalido" xml:space="preserve">
+    <value>O alcunha do autor é invalido</value>
+  </data>
   <data name="TagDuplicado" xml:space="preserve">
-    <value>A morada não pode ser duplicada</value>
+    <value>O Autor não pode ser duplicado</value>
   </data>
-  <data name="TagInvalida" xml:space="preserve">
-    <value>A morada invalida</value>
+  <data name="TagInvalido" xml:space="preserve">
+    <value>O Autor não é valido</value>
   </data>
-  <data name="TagNotFoundOld" xml:space="preserve">
-    <value>A morada anterior não foi encontrada</value>
+  <data name="TagNomeInvalido" xml:space="preserve">
+    <value>O nome do autor é invalido</value>
+  </data>
+  <data name="TagNotFound" xml:space="preserve">
+    <value>O Autor não foi encontrado</value>
+  </data>
+  <data name="TagSobreNomeInvalido" xml:space="preserve">
+    <value>O sobrenome do autor é invalido</value>
   </data>
 </root>

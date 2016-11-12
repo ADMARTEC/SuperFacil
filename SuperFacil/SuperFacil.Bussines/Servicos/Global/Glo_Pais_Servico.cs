@@ -17,6 +17,8 @@ namespace SuperFacil.Bussines.Servicos.Global
     {
         private IGlo_Pais_Repositorio _repositorio;
 
+        public Glo_Pais_Servico() { }
+
         public Glo_Pais_Servico(IGlo_Pais_Repositorio repositorio)
         {
             _repositorio = repositorio;

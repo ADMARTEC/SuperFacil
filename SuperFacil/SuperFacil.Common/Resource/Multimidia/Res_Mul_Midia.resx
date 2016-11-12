@@ -117,13 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TagClassificacaoInvalida" xml:space="preserve">
+    <value>A classificação não é valida</value>
+  </data>
+  <data name="TagDataLancaInvalido" xml:space="preserve">
+    <value>A data de lançamento não é valida</value>
+  </data>
   <data name="TagDuplicado" xml:space="preserve">
-    <value>A morada não pode ser duplicada</value>
+    <value>A midia não pode ser duplicada</value>
   </data>
-  <data name="TagInvalida" xml:space="preserve">
-    <value>A morada invalida</value>
+  <data name="TagEditoraInvalida" xml:space="preserve">
+    <value>A editora não é valida</value>
   </data>
-  <data name="TagNotFoundOld" xml:space="preserve">
-    <value>A morada anterior não foi encontrada</value>
+  <data name="TagFaixaNotFound" xml:space="preserve">
+    <value>A faixa não foi encontrada</value>
+  </data>
+  <data name="TagGeneroInvalido" xml:space="preserve">
+    <value>O Genero não é valido</value>
+  </data>
+  <data name="TagInvalido" xml:space="preserve">
+    <value>A midia não é valida</value>
+  </data>
+  <data name="TagNotFound" xml:space="preserve">
+    <value>A midia não foi encontrada</value>
+  </data>
+  <data name="TagParentIinvalido" xml:space="preserve">
+    <value>A sub midia não foi encontrada</value>
+  </data>
+  <data name="TagTagNotFound" xml:space="preserve">
+    <value>A tag não foi encontrada</value>
   </data>
 </root>

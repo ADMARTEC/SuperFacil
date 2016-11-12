@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperFacil.Common.Resource.Global {
+namespace SuperFacil.Common.Resource.Multimidia {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource.Global {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Res_Glo_Morada {
+    public class Res_Mul_Autor {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Res_Glo_Morada() {
+        internal Res_Mul_Autor() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource.Global {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Global.Res_Glo_Morada", typeof(Res_Glo_Morada).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Multimidia.Res_Mul_Autor", typeof(Res_Mul_Autor).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,16 @@ namespace SuperFacil.Common.Resource.Global {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A morada não pode ser duplicada.
+        ///   Looks up a localized string similar to O alcunha do autor é invalido.
+        /// </summary>
+        public static string TagAlcunhaInvalido {
+            get {
+                return ResourceManager.GetString("TagAlcunhaInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Autor não pode ser duplicado.
         /// </summary>
         public static string TagDuplicado {
             get {
@@ -70,20 +79,38 @@ namespace SuperFacil.Common.Resource.Global {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A morada invalida.
+        ///   Looks up a localized string similar to O Autor não é valido.
         /// </summary>
-        public static string TagInvalida {
+        public static string TagInvalido {
             get {
-                return ResourceManager.GetString("TagInvalida", resourceCulture);
+                return ResourceManager.GetString("TagInvalido", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A morada anterior não foi encontrada.
+        ///   Looks up a localized string similar to O nome do autor é invalido.
         /// </summary>
-        public static string TagNotFoundOld {
+        public static string TagNomeInvalido {
             get {
-                return ResourceManager.GetString("TagNotFoundOld", resourceCulture);
+                return ResourceManager.GetString("TagNomeInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Autor não foi encontrado.
+        /// </summary>
+        public static string TagNotFound {
+            get {
+                return ResourceManager.GetString("TagNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O sobrenome do autor é invalido.
+        /// </summary>
+        public static string TagSobreNomeInvalido {
+            get {
+                return ResourceManager.GetString("TagSobreNomeInvalido", resourceCulture);
             }
         }
     }

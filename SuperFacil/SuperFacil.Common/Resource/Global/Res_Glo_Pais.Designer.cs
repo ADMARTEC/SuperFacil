@@ -22,14 +22,14 @@ namespace SuperFacil.Common.Resource.Global {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Res_Pais {
+    public class Res_Glo_Pais {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Res_Pais() {
+        internal Res_Glo_Pais() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SuperFacil.Common.Resource.Global {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Global.Res_Pais", typeof(Res_Pais).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SuperFacil.Common.Resource.Global.Res_Glo_Pais", typeof(Res_Glo_Pais).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

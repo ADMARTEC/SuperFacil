@@ -71,10 +71,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res_Glo_Morada.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resource\Global\Res_Pais.Designer.cs">
+    <Compile Include="Resource\Global\Res_Glo_Pais.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Res_Pais.resx</DependentUpon>
+      <DependentUpon>Res_Glo_Pais.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Multimidia\Res_Mul_Autor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Mul_Autor.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource\Multimidia\Res_Mul_Midia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Res_Mul_Midia.resx</DependentUpon>
     </Compile>
     <Compile Include="Resource\Res_Base.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -113,9 +123,17 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Res_Glo_Morada.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource\Global\Res_Pais.resx">
+    <EmbeddedResource Include="Resource\Global\Res_Glo_Pais.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Res_Pais.Designer.cs</LastGenOutput>
+      <LastGenOutput>Res_Glo_Pais.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Multimidia\Res_Mul_Autor.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Mul_Autor.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\Multimidia\Res_Mul_Midia.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Mul_Midia.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\Res_Base.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

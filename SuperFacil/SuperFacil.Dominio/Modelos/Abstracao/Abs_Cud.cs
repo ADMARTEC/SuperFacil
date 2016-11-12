@@ -61,10 +61,10 @@ namespace SuperFacil.Dominio.Modelos.Abstracao
             this.Default = _Default;
         }
 
-        public void Set_Cud_Delete(int _Usuario, DateTime _CreateDate, bool _Delete = true)
+        public void Set_Cud_Delete(int _Usuario, DateTime _DeleteDate, bool _Delete = true)
         {
             this.UpdateUser = _Usuario;
-            this.UpdateDate = _CreateDate;
+            this.UpdateDate = _DeleteDate;
             this.Deleted = _Delete;
         }
 
