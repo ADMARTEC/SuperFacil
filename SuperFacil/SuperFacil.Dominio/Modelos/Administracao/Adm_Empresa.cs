@@ -44,6 +44,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public virtual Glo_Contacto Contacto { get; set; }
         public virtual Glo_Morada Morada { get; set; }
         public virtual Glo_Pais Pais { get; set; }
+        public virtual Sis_Sessao Sessao { get; set; }
         #endregion
 
         #region - Metodos -        

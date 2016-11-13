@@ -70,6 +70,15 @@ namespace SuperFacil.Common.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A designação deve ter de 4 á 50 caracteres.
+        /// </summary>
+        public static string TagDesignacaoSize {
+            get {
+                return ResourceManager.GetString("TagDesignacaoSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O NIF indicado não foi encontrado.
         /// </summary>
         public static string TagNIFNotFound {

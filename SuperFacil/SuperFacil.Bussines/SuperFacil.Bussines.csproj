@@ -50,11 +50,15 @@
     <Compile Include="Servicos\Global\Glo_Morada_Servico.cs" />
     <Compile Include="Servicos\Global\Glo_Pais_Servico.cs" />
     <Compile Include="Servicos\Multimidia\Mul_Autor_Servico.cs" />
+    <Compile Include="Servicos\Multimidia\Mul_Biografia_Servico.cs" />
+    <Compile Include="Servicos\Multimidia\Mul_Localizacao_Servico.cs" />
     <Compile Include="Servicos\Multimidia\Mul_Midia_Servico.cs" />
+    <Compile Include="Servicos\Sistema\Sis_Menu_Servico.cs" />
+    <Compile Include="Servicos\Sistema\Sis_Modulo_Servico.cs" />
+    <Compile Include="Servicos\Sistema\Sis_Sessao_Servico.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Servicos\Recursos_Humanos\" />
-    <Folder Include="Servicos\Sistema\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">

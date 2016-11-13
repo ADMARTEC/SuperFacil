@@ -1,9 +1,6 @@
-﻿using SuperFacil.Dominio.Modelos.Abstracao;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SuperFacil.Common.Resource;
+using SuperFacil.Common.Validacao;
+using SuperFacil.Dominio.Modelos.Abstracao;
 
 namespace SuperFacil.Dominio.Modelos.Sistema
 {
@@ -16,7 +13,24 @@ namespace SuperFacil.Dominio.Modelos.Sistema
     {
         #region - Propriedade -
         public int Menu_ID { get; set; }
-        public int Parent_ID { get; set; }
+        public int? Parent { get; set; }
+        public int Modulo_ID { get; set; }
+        #endregion
+
+        #region - Relacionamento -
+        public virtual Sis_Modulo Modulo { get; set; }
+        #endregion
+
+        #region - Methods -    
+        public void Set_Menu(int? _Parent, string _Designacao)
+        {
+            AssertionConcern.AssertArgumentNotEmpty(_Designacao, Res_Base.TagDesignacaoNull);
+            AssertionConcern.AssertArgumentNotNull(_Designacao, Res_Base.TagDesignacaoNull);
+            AssertionConcern.AssertArgumentLength(_Designacao, 4, 50, Res_Base.TagDesignacaoSize);
+            
+            this.Parent = _Parent;
+            this.Designacao = _Designacao;
+        }
         #endregion
     }
 }

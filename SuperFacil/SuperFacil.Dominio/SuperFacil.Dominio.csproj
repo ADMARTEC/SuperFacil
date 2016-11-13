@@ -60,6 +60,9 @@
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Biografia_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Localizacao_Repositorio.cs" />
     <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Sistema\ISis_Menu_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Sistema\ISis_Modulo_Repositorio.cs" />
+    <Compile Include="Contratos\Repositorios\Sistema\ISis_Sessao_Repositorio.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Empresa_Servico.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Perfil_Servico.cs" />
     <Compile Include="Contratos\Servicos\Administracao\IAdm_Usuario_Servico.cs" />
@@ -71,6 +74,9 @@
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Biografia_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Localizacao_Servico.cs" />
     <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Sistema\ISis_Menu_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Sistema\ISis_Modulo_Servico.cs" />
+    <Compile Include="Contratos\Servicos\Sistema\ISis_Sessao_Servico.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
     <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
@@ -88,14 +94,13 @@
     <Compile Include="Modelos\Recursos_Humano\Reh_Funcionario.cs" />
     <Compile Include="Modelos\Sistema\Sis_HorarioAcesso.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
+    <Compile Include="Modelos\Sistema\Sis_Modulo.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contratos\Repositorios\Recursos_Humanos\" />
-    <Folder Include="Contratos\Repositorios\Sistema\" />
     <Folder Include="Contratos\Servicos\Recursos_Humanos\" />
-    <Folder Include="Contratos\Servicos\Sistema\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
