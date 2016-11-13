@@ -9,7 +9,7 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
     {
     public interface IMul_Biografia_Repositorio : IDisposable
         {
-        #region SELECT - R
+        #region -Selecionar-
         Task<Mul_Biografia> GetByID(int Empresa, int value);
         Task<Mul_Biografia> GetByDesiginacao(int Empresa, string value);
         #endregion

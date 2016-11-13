@@ -106,6 +106,15 @@ namespace SuperFacil.Common.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A nota deve contér no maximo 500 letras.
+        /// </summary>
+        public static string TagNotaSize {
+            get {
+                return ResourceManager.GetString("TagNotaSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to É obrigatório preencher o Sobrenome.
         /// </summary>
         public static string TagSobrenomeNull {

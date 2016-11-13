@@ -32,7 +32,7 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         #region Metodos
         public void Set_Biografia(int _Empresa_ID,string _Notas)
         {
-            AssertionConcern.AssertArgumentLength(_Notas, 500, Res_Base.TagNomeSize);
+            AssertionConcern.AssertArgumentLength(_Notas, 500, Res_Base.TagNotaSize);
 
             this.Designacao = _Notas;
             this.Empresa_ID = _Empresa_ID;
