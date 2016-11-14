@@ -54,5 +54,30 @@ namespace SuperFacil.Infraestrutura.Repositorio.Multimidia
             db.Entry<Mul_Autor>(autor).State = EntityState.Modified;
             await db.SaveChangesAsync();
             }
+
+        public Task<Mul_Autor> GetByNome(int Empresa, string value)
+            {
+            return db.Mul_Autor.Where(x => x.Empresa_ID == Empresa && x.Nome == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Autor> GetBySobrenome(int Empresa, string value)
+            {
+            return db.Mul_Autor.Where(x => x.Empresa_ID == Empresa && x.Sobrenome == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Autor> GetByAlcunha(int Empresa, string value)
+            {
+            return db.Mul_Autor.Where(x => x.Empresa_ID == Empresa && x.Alcunha == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Autor> GetByDesiginacao(int Empresa, string _Nome, string _Sobrenome)
+            {
+            return db.Mul_Autor.Where(x => x.Empresa_ID == Empresa && x.Nome == _Nome && x.Sobrenome == _Sobrenome).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Autor> GetByDesiginacao(int Empresa, string _Nome, string _Sobrenome, string Alcunha)
+            {
+            return db.Mul_Autor.Where(x => x.Empresa_ID == Empresa && x.Nome == _Nome && x.Sobrenome == _Sobrenome && x.Alcunha == Alcunha).FirstOrDefaultAsync();
+            }
         }
     }

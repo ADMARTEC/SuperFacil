@@ -48,7 +48,7 @@ namespace SuperFacil.Bussines.Servicos.Multimidia
         public void Save(string _Empresa, string _Parent, string _Designacao, string _UpdateUser, bool _Activo, bool _Default)
         {
             throw new NotImplementedException();
-        //}
+        }
 
         public void Delete(string _Empresa, string _Parent, string _Designacao, string _DeleteUser)
         {

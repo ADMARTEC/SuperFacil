@@ -13,7 +13,7 @@ namespace SuperFacil.Dominio.Contratos.Repositorios.Multimidia
         Task<Mul_Midia> GetByFaixa(int Empresa, int? Parent, int value);
         Task<Mul_Midia> GetByDesiginacao(int Empresa, int? _Parent, string value);
         Task<Mul_Midia> GetByGenero(int Empresa, int? _Parent, string value);
-        Task<Mul_Midia> GetByEstado(int Empresa, int? _Parent, string value);
+        Task<Mul_Midia> GetByEstado(int Empresa, int? _Parent, bool value);
         Task<Mul_Midia> GetByTag(int Empresa, int? Parent, string value);
         Task<Mul_Midia> GetByAno_Lancamento(int Empresa, int? Parent, DateTime value);
         Task<Mul_Midia> GetByClassificacao(int Empresa, int? Parent, string value);

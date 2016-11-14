@@ -77,5 +77,45 @@ namespace SuperFacil.Infraestrutura.Repositorio.Multimidia
             {
             return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == Parent && x.Tag == value).FirstOrDefaultAsync();
             }
+
+        public Task<Mul_Midia> GetByEditora(int Empresa, int? _Parent, string value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == _Parent && x.Editora == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByFaixa(int Empresa, int? Parent, int value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == Parent && x.Faixa == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByDesiginacao(int Empresa, int? _Parent, string value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == _Parent && x.Designacao == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByGenero(int Empresa, int? _Parent, string value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == _Parent && x.Genero == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByEstado(int Empresa, int? _Parent, bool value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == _Parent && x.Estado == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByTag(int Empresa, int? Parent, string value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == Parent && x.Tag == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByAno_Lancamento(int Empresa, int? Parent, DateTime value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == Parent && x.Ano_Lancamento == value).FirstOrDefaultAsync();
+            }
+
+        public Task<Mul_Midia> GetByClassificacao(int Empresa, int? Parent, string value)
+            {
+            return db.Mul_Midia.Where(x => x.Empresa_ID == Empresa && x.Parent_ID == Parent && x.Classificacao == value).FirstOrDefaultAsync();
+            }
         }
     }

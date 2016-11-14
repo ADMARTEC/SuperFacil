@@ -34,6 +34,11 @@ namespace SuperFacil.Infraestrutura.Repositorio.Multimidia
             GC.Collect();
             }
 
+        public Task<Mul_Localizacao> GetByDesignacao(int Empresa, string value)
+            {
+            return db.Mul_Localizacao.Where(x => x.Empresa_ID == Empresa && x.Designacao == value).FirstOrDefaultAsync();
+            }
+
         public Task<Mul_Localizacao> GetByID(int Empresa, int value)
             {
             return db.Mul_Localizacao.Where(x => x.Empresa_ID == Empresa && x.Localizacao_ID == value).FirstOrDefaultAsync();
