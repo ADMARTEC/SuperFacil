@@ -57,7 +57,6 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Multimidia
             Property(x => x.Duracao)
                 .HasColumnOrder(9)
                 .IsOptional()
-                .HasMaxLength(5) /*Duração só precisa de 5 caraceters Ex: 03:45*/
                 .HasColumnType("nvarchar");
 
             Property(x => x.Tag)
@@ -69,8 +68,7 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Multimidia
             Property(x => x.Estado)
                 .HasColumnOrder(11)
                 .IsOptional()
-                .HasMaxLength(50)
-                .HasColumnType("nvarchar");
+                .HasColumnType("bool");
 
             #region Padrão - Segundo Martinho André
 
