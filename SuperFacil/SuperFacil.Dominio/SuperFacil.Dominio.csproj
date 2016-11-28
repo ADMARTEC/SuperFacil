@@ -49,37 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Empresa_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Perfil_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Administracao\IAdm_Usuario_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Global\IGlo_Contacto_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Global\IGlo_Imagem_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Global\IGlo_Morada_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Global\IGlo_Pais_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Autor_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Biografia_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Localizacao_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Multimidia\IMul_Midia_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Sistema\ISis_Menu_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Sistema\ISis_Modulo_Repositorio.cs" />
-    <Compile Include="Contratos\Repositorios\Sistema\ISis_Sessao_Repositorio.cs" />
-    <Compile Include="Contratos\Servicos\Administracao\IAdm_Empresa_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Administracao\IAdm_Perfil_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Administracao\IAdm_Usuario_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Global\IGlo_Contacto_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Global\IGlo_Imagem_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Global\IGlo_Morada_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Global\IGlo_Pais_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Multimidia\IMul_Autor_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Multimidia\IMul_Biografia_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Multimidia\IMul_Localizacao_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Multimidia\IMul_Midia_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Sistema\ISis_Menu_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Sistema\ISis_Modulo_Servico.cs" />
-    <Compile Include="Contratos\Servicos\Sistema\ISis_Sessao_Servico.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Base.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Cud.cs" />
-    <Compile Include="Modelos\Abstracao\Abs_Pessoa.cs" />
     <Compile Include="Modelos\Administracao\Adm_Perfil.cs" />
     <Compile Include="Modelos\Administracao\Adm_Usuario.cs" />
     <Compile Include="Modelos\Global\Glo_Contacto.cs" />
@@ -88,20 +57,18 @@
     <Compile Include="Modelos\Global\Glo_Pais.cs" />
     <Compile Include="Modelos\Administracao\Adm_Empresa.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Autor.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Biografia.cs" />
-    <Compile Include="Modelos\Multimidia\Mul_Localizacao.cs" />
+    <Compile Include="Modelos\Global\Glo_Nota.cs" />
+    <Compile Include="Modelos\Comercial\Com_Localizacao.cs" />
     <Compile Include="Modelos\Multimidia\Mul_Midia.cs" />
     <Compile Include="Modelos\Recursos_Humano\Reh_Funcionario.cs" />
+    <Compile Include="Modelos\Sistema\Sis_Aplicacao.cs" />
     <Compile Include="Modelos\Sistema\Sis_HorarioAcesso.cs" />
     <Compile Include="Modelos\Sistema\Sis_Menu.cs" />
     <Compile Include="Modelos\Sistema\Sis_Modulo.cs" />
     <Compile Include="Modelos\Sistema\Sis_Sessao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contratos\Repositorios\Recursos_Humanos\" />
-    <Folder Include="Contratos\Servicos\Recursos_Humanos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SuperFacil.Common\SuperFacil.Common.csproj">
       <Project>{986504b0-0549-47ef-9df3-2732127fa49d}</Project>

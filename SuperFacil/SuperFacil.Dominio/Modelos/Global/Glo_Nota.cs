@@ -2,12 +2,11 @@
 
 namespace SuperFacil.Dominio.Modelos.Global
 {
-    public class Glo_Pais 
+    public class Glo_Nota 
     {
         #region - Propriedade -
-        public int Pais_ID { get; set; }
-        public int? Parent_ID { get; set; }
-        public string Designacao { get; set; }
+        public int Nota_ID { get; set; }
+        public string Notas { get; set; }
         public bool Activo { get; set; } = true;
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }
@@ -15,11 +14,7 @@ namespace SuperFacil.Dominio.Modelos.Global
         public DateTime UpdateDate { get; set; }
         public bool Deleted { get; set; } = false;
         public bool Default { get; set; } = false;
-        #endregion
-
-        #region - Relacionamento -
-        public virtual Glo_Morada Morada { get; set; }
-        #endregion
-                
+        #endregion              
     }
+
 }

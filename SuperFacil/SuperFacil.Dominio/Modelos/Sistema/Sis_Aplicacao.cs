@@ -1,22 +1,23 @@
-﻿using System;
+﻿using SuperFacil.Dominio.Modelos.Administracao;
+using System;
 using System.Collections.Generic;
 
 namespace SuperFacil.Dominio.Modelos.Sistema
 {
-    public class Sis_Modulo
+    public class Sis_Aplicacao
     {
         #region - Construtor -
-        public Sis_Modulo()
+        public Sis_Aplicacao()
         {
-            this.Menu = new List<Sis_Menu>();
+            this.Modulo = new List<Sis_Modulo>();
+            this.Pefil = new List<Adm_Perfil>();
         }
         #endregion
 
-        #region - Propriedade -
-        public int Modulo_ID { get; set; }
+        #region - Propriedade -        
         public int Aplicacao_ID { get; set; }
-        public int? Parent { get; set; }
         public string Designacao { get; set; }
+        public string Versao { get; set; }
         public bool Activo { get; set; } = true;
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }
@@ -27,8 +28,8 @@ namespace SuperFacil.Dominio.Modelos.Sistema
         #endregion
 
         #region - Relacionamento -
-        public virtual ICollection<Sis_Menu> Menu { get; set; }
-        public virtual Sis_Aplicacao Aplicacao { get; set; }
+        public virtual ICollection<Sis_Modulo> Modulo { get; set; }
+        public virtual ICollection<Adm_Perfil> Pefil { get; set; }
         #endregion
     }
 }

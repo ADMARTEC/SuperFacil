@@ -10,5 +10,9 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Global
 {
     public class Glo_Imagem_Map : EntityTypeConfiguration<Glo_Imagem>
     {
+        public Glo_Imagem_Map()
+        {
+            this.HasKey(x => x.Imagem_ID);
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Administracao
     {
         public Adm_Empresa_Map()
         {
+            
             this.HasKey(x => x.Empresa_ID);
 
             Property(x => x.Empresa_ID)
@@ -32,7 +33,7 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Administracao
 
             Property(x => x.Contacto_ID)
                 .HasColumnOrder(5)
-                .IsOptional();
+                .IsRequired();
 
             Property(x => x.Pais_ID)
                 .HasColumnOrder(6)

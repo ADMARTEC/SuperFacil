@@ -10,5 +10,9 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Global
 {
     public class Glo_Pais_Map : EntityTypeConfiguration<Glo_Pais>
     {
+        public Glo_Pais_Map()
+        {
+            this.HasKey(x=> x.Pais_ID);
+        }
     }
 }

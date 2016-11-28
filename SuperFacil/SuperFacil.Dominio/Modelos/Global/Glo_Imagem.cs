@@ -1,27 +1,17 @@
-﻿using SuperFacil.Dominio.Modelos.Abstracao;
-using SuperFacil.Dominio.Modelos.Administracao;
+﻿using System;
 
 namespace SuperFacil.Dominio.Modelos.Global
 {
-    /* 
-    * Propriedades Abstratas a ter em conta:
-    * Designacao
-    * Create,Update e Deleted  --- Nunca deve faltar em nenhuma classe
-    */
-    public class Glo_Imagem : Abs_Base
+    public class Glo_Imagem 
     {
         public int Imagem_ID { get; set; }
-        public int Empresa_ID { get; set; }
-
-        public virtual Adm_Usuario Usuario { get; set; }
-        public virtual Adm_Empresa Empresa { get; set; }
-
-        public void Set_Imagem(int _Empresa, string _Designacao)
-        {
-            this.Empresa_ID = _Empresa;
-            this.Designacao = _Designacao;
-        }
-
-
+        public string Designacao { get; set; }
+        public bool Activo { get; set; } = true;
+        public int CreateUser { get; set; }
+        public DateTime CreateDate { get; set; }
+        public int UpdateUser { get; set; }
+        public DateTime UpdateDate { get; set; }
+        public bool Deleted { get; set; } = false;
+        public bool Default { get; set; } = false;       
     }
 }

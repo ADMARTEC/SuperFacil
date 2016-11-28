@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Infraestrutura",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Common", "SuperFacil.Common\SuperFacil.Common.csproj", "{986504B0-0549-47EF-9DF3-2732127FA49D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Bussines", "SuperFacil.Bussines\SuperFacil.Bussines.csproj", "{49F80C19-D87C-46CA-972D-74A438704622}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Business", "SuperFacil.Bussines\SuperFacil.Business.csproj", "{49F80C19-D87C-46CA-972D-74A438704622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.UI._Console", "SuperFacil.UI.Console\SuperFacil.UI._Console.csproj", "{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{49F80C19-D87C-46CA-972D-74A438704622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F80C19-D87C-46CA-972D-74A438704622}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F80C19-D87C-46CA-972D-74A438704622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

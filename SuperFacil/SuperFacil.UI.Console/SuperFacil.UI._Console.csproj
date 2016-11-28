@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1972B967-7015-49C4-BB98-4BCD6394A60A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SuperFacil.Infraestrutura</RootNamespace>
-    <AssemblyName>SuperFacil.Infraestrutura</AssemblyName>
+    <RootNamespace>SuperFacil.UI.Console</RootNamespace>
+    <AssemblyName>SuperFacil.UI.Console</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,37 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Infra_Base.cs" />
-    <Compile Include="Mapeamento\Administracao\Adm_Empresa_Map.cs" />
-    <Compile Include="Mapeamento\Administracao\Adm_Perfil_Map.cs" />
-    <Compile Include="Mapeamento\Administracao\Adm_Usuario_Map.cs" />
-    <Compile Include="Mapeamento\Global\Glo_Contacto_Map.cs" />
-    <Compile Include="Mapeamento\Global\Glo_Imagem_Map.cs" />
-    <Compile Include="Mapeamento\Global\Glo_Morada_Map.cs" />
-    <Compile Include="Mapeamento\Global\Glo_Pais_Map.cs" />
-    <Compile Include="Mapeamento\Multimidia\Mul_Autor_Map.cs" />
-    <Compile Include="Mapeamento\Global\Glo_Nota_Map.cs" />
-    <Compile Include="Comercial\Com_Localizacao_Map.cs" />
-    <Compile Include="Mapeamento\Multimidia\Mul_Midia_Map.cs" />
-    <Compile Include="Mapeamento\Recursos_Humano\Reh_Funcionario_Map.cs" />
-    <Compile Include="Mapeamento\Sistema\Sis_Aplicacao_Map.cs" />
-    <Compile Include="Mapeamento\Sistema\Sis_HorarioAcesso_Map.cs" />
-    <Compile Include="Mapeamento\Sistema\Sis_Menu_Map.cs" />
-    <Compile Include="Mapeamento\Sistema\Sis_Modulo_Map.cs" />
-    <Compile Include="Mapeamento\Sistema\Sis_Sessao_Map.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Configuracoes\SuperFacilContexto.cs" />
-    <Compile Include="Configuracoes\SuperFacilInicializador.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SuperFacil.Dominio\SuperFacil.Dominio.csproj">
-      <Project>{D3A91213-B6E9-406D-847C-6E8D2DA76519}</Project>
-      <Name>SuperFacil.Dominio</Name>
+    <ProjectReference Include="..\SuperFacil.Bussines\SuperFacil.Business.csproj">
+      <Project>{49F80C19-D87C-46CA-972D-74A438704622}</Project>
+      <Name>SuperFacil.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperFacil.Infraestrutura\SuperFacil.Infraestrutura.csproj">
+      <Project>{1972B967-7015-49C4-BB98-4BCD6394A60A}</Project>
+      <Name>SuperFacil.Infraestrutura</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
