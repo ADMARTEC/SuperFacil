@@ -1,9 +1,5 @@
 ﻿using SuperFacil.Dominio.Modelos.Administracao;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperFacil.Dominio.Modelos.Recursos_Humano
 {
@@ -25,8 +21,7 @@ namespace SuperFacil.Dominio.Modelos.Recursos_Humano
         #endregion
 
         #region - Relacionamento -
-        public virtual Adm_Usuario Usuario { get; set; }
+      //  public virtual Adm_Usuario Usuario { get; set; }
         #endregion
-
     }
 }

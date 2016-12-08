@@ -6,12 +6,12 @@ namespace SuperFacil.Dominio.Modelos.Global
     {     
         #region - Propriedade -  
         public int Contacto_ID { get; set; }
-        public int? Telefone { get; set; }
+        public int Telefone { get; set; }
         public int? Telefone_2 { get; set; }
         public string Email { get; set; }
         public string Email_2 { get; set; }
         public string Responsavel { get; set; } // Se o contacto pertencer a uma pessoa juridica, deve ser preenchido  com o nome de uma pessoa física
-        public bool Master { get; set; }
+        public bool Master { get; set; } = false;
         public bool Activo { get; set; } = true;
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }

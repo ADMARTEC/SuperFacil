@@ -10,58 +10,49 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Administracao
         {
             this.HasKey(x => x.Perfil_ID);
 
-            Property(x => x.Perfil_ID)
-                .HasColumnOrder(1)
+            Property(x => x.Perfil_ID)                
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            Property(x => x.Empresa_ID)
-                 .HasColumnOrder(2)
+            Property(x => x.Aplicacao_ID)                
+                .IsRequired();
+
+            Property(x => x.Empresa_ID)                 
                  .IsRequired();
 
-            Property(x => x.Parent_ID)
-                .HasColumnOrder(3)
+            Property(x => x.Parent_ID)                
                 .IsOptional();
 
-            Property(x => x.Designacao)
-                .HasColumnOrder(4)
+            Property(x => x.Designacao)                
                 .IsRequired()
                 .HasMaxLength(250)
                 .HasColumnType("nvarchar");
 
-            Property(x => x.HorarioAcesso_ID)
-                .HasColumnOrder(5)
+            Property(x => x.HorarioAcesso_ID)                
                 .IsOptional();
 
-            Property(x => x.Activo)
-               .HasColumnOrder(6)
+            Property(x => x.Activo)               
                .IsRequired()
                .HasColumnType("bit");
 
-            Property(x => x.CreateUser)
-               .HasColumnOrder(7)
+            Property(x => x.CreateUser)               
                .IsRequired();
 
-            Property(x => x.CreateDate)
-               .HasColumnOrder(8)
+            Property(x => x.CreateDate)               
                .IsRequired()
                .HasColumnType("datetime");
 
-            Property(x => x.UpdateUser)
-               .HasColumnOrder(9)
+            Property(x => x.UpdateUser)               
                .IsRequired();
 
-            Property(x => x.UpdateDate)
-               .HasColumnOrder(10)
+            Property(x => x.UpdateDate)               
                .IsRequired()
                .HasColumnType("datetime");
 
-            Property(x => x.Deleted)
-               .HasColumnOrder(11)
+            Property(x => x.Deleted)               
                .IsRequired()
                .HasColumnType("bit");
 
-            Property(x => x.Default)
-               .HasColumnOrder(12)
+            Property(x => x.Default)               
                .IsRequired()
                .HasColumnType("bit");
         }

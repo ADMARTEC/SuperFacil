@@ -11,12 +11,13 @@ namespace SuperFacil.Bussines.Administracao
     {
         public string GetCodigo()
         {
+            
             var res = All_Adm_Empresa()
                       .Where(x => x.Designacao != null)
                       .Select(x => new
                       {
                           Designacao = x.Designacao
-                      }).FirstOrDefault();
+                      }).FirstOrDefault();      
 
             return res.Designacao;
         }

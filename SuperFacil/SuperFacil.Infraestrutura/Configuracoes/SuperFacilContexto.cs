@@ -5,11 +5,13 @@ using SuperFacil.Dominio.Modelos.Multimidia;
 using SuperFacil.Dominio.Modelos.Recursos_Humano;
 using SuperFacil.Dominio.Modelos.Sistema;
 using SuperFacil.Infraestrutura.Mapeamento.Administracao;
+using SuperFacil.Infraestrutura.Mapeamento.Comercial;
 using SuperFacil.Infraestrutura.Mapeamento.Global;
 using SuperFacil.Infraestrutura.Mapeamento.Multimidia;
 using SuperFacil.Infraestrutura.Mapeamento.Recursos_Humano;
 using SuperFacil.Infraestrutura.Mapeamento.Sistema;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace SuperFacil.Infraestrutura
 {
@@ -49,6 +51,9 @@ namespace SuperFacil.Infraestrutura
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Configurations.Add(new Glo_Nota_Map());
             modelBuilder.Configurations.Add(new Sis_Menu_Map());
             modelBuilder.Configurations.Add(new Glo_Pais_Map());
             modelBuilder.Configurations.Add(new Mul_Autor_Map());
@@ -63,9 +68,8 @@ namespace SuperFacil.Infraestrutura
             modelBuilder.Configurations.Add(new Glo_Contacto_Map());
             modelBuilder.Configurations.Add(new Sis_Aplicacao_Map());
             modelBuilder.Configurations.Add(new Com_Localizacao_Map());
-            modelBuilder.Configurations.Add(new Reh_Funcionario_Map());
-            modelBuilder.Configurations.Add(new Glo_Nota_Map());
-            modelBuilder.Configurations.Add(new Sis_HorarioAcesso_Map());
+            modelBuilder.Configurations.Add(new Reh_Funcionario_Map());          
+            modelBuilder.Configurations.Add(new Sis_HorarioAcesso_Map());           
 
             base.OnModelCreating(modelBuilder);
         }

@@ -11,75 +11,65 @@ namespace SuperFacil.Infraestrutura.Mapeamento.Administracao
         {
             this.HasKey(x => x.Usuario_ID);
 
-            Property(x => x.Usuario_ID)
-                .HasColumnOrder(1)
+            Property(x => x.Usuario_ID)                
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
-            Property(x => x.Empresa_ID)
-                .HasColumnOrder(2)
+            Property(x => x.Empresa_ID)                
                 .IsRequired();
 
-            Property(x => x.Perfil_ID)
-                .HasColumnOrder(3)
+            Property(x => x.Perfil_ID)                
                 .IsRequired();
 
-            Property(x => x.Funcionario_ID)
-                .HasColumnOrder(4)
-                .IsOptional(); // Suporta null
+            Property(x => x.Funcionario_ID)                
+                .IsOptional();
 
-            Property(x => x.Nome)
-                .HasColumnOrder(5)
+            Property(x => x.Imagem_ID)
+                .IsOptional();
+
+            Property(x => x.Nome)                
                 .IsRequired()
                 .HasMaxLength(250)
+                .HasColumnType("nvarchar")
                 .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_Nome", 1) { IsUnique = true }));
 
-            Property(x => x.Usuario_login)
-                .HasColumnOrder(6)  // É opcional mais indica a ordem das colunas na base de dados
-                .IsRequired() // Indica que o campo é Not null
-                .HasMaxLength(20) // Tamanho maximo de caracter                
-                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_Login") { IsUnique = true }))
+            Property(x => x.Usuario_login)             
+                .IsRequired()
+                .HasMaxLength(20)
+                .HasColumnType("nvarchar")
+                .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_Login",1) { IsUnique = true }))
                 .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UQ_Nome", 2) { IsUnique = true }));
 
-            Property(x => x.Senha)
-                .HasColumnOrder(7)
+            Property(x => x.Senha)                
                 .IsRequired()
-                .HasMaxLength(250);
+                .HasColumnType("nvarchar");
 
-            Property(x => x.Data_Limite)
-                .HasColumnOrder(8)
+            Property(x => x.Data_Limite)                
                 .IsOptional()
                 .HasColumnType("datetime");
 
-            Property(x => x.Activo)
-                .HasColumnOrder(9)
+            Property(x => x.Activo)                
                 .IsRequired()
                 .HasColumnType("bit");
 
-            Property(x => x.CreateUser)
-               .HasColumnOrder(10)
+            Property(x => x.CreateUser)               
                .IsRequired();
 
-            Property(x => x.CreateDate)
-               .HasColumnOrder(11)
+            Property(x => x.CreateDate)               
                .IsRequired()
                .HasColumnType("datetime");
 
-            Property(x => x.UpdateUser)
-               .HasColumnOrder(12)
+            Property(x => x.UpdateUser)              
                .IsRequired();
 
-            Property(x => x.UpdateDate)
-               .HasColumnOrder(13)
+            Property(x => x.UpdateDate)               
                .IsRequired()
                .HasColumnType("datetime");
 
-            Property(x => x.Deleted)
-               .HasColumnOrder(14)
+            Property(x => x.Deleted)               
                .IsRequired()
                .HasColumnType("bit");
 
-            Property(x => x.Default)
-               .HasColumnOrder(15)
+            Property(x => x.Default)               
                .IsRequired()
                .HasColumnType("bit");
         }

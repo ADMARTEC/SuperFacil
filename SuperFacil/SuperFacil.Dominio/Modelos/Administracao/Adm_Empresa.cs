@@ -1,12 +1,12 @@
-﻿using SuperFacil.Dominio.Modelos.Global;
+﻿using SuperFacil.Dominio.Modelos.Comercial;
+using SuperFacil.Dominio.Modelos.Global;
 using SuperFacil.Dominio.Modelos.Sistema;
 using System;
 using System.Collections.Generic;
 
 namespace SuperFacil.Dominio.Modelos.Administracao
 {
-
-    public class Adm_Empresa 
+    public class Adm_Empresa
     {
         #region - Construtor -       
         public Adm_Empresa()
@@ -14,6 +14,7 @@ namespace SuperFacil.Dominio.Modelos.Administracao
             this.Perfil = new List<Adm_Perfil>();
             this.Usuario = new List<Adm_Usuario>();
             this.HorarioAcesso = new List<Sis_HorarioAcesso>();
+            this.Localizacao = new List<Com_Localizacao>();
         }
         #endregion
 
@@ -39,11 +40,13 @@ namespace SuperFacil.Dominio.Modelos.Administracao
         public virtual ICollection<Adm_Perfil> Perfil { get; set; }
         public virtual ICollection<Adm_Usuario> Usuario { get; set; }
         public virtual ICollection<Sis_HorarioAcesso> HorarioAcesso { get; set; }
+        public virtual ICollection<Com_Localizacao> Localizacao { get; set; }
+
         public virtual Glo_Imagem Imagem { get; set; }
         public virtual Glo_Contacto Contacto { get; set; }
         public virtual Glo_Morada Morada { get; set; }
         public virtual Glo_Pais Pais { get; set; }
-       // public virtual Sis_Sessao Sessao { get; set; }
-        #endregion             
+        // public virtual Sis_Sessao Sessao { get; set; }
+        #endregion
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperFacil.Dominio.Modelos.Administracao;
+using System;
 
 namespace SuperFacil.Dominio.Modelos.Comercial
 {
@@ -16,6 +17,10 @@ namespace SuperFacil.Dominio.Modelos.Comercial
         public DateTime UpdateDate { get; set; }
         public bool Deleted { get; set; } = false;
         public bool Default { get; set; } = false;
-        #endregion             
+        #endregion
+
+        #region - Relacionamento -
+        public virtual Adm_Empresa Empresa { get; set; }
+        #endregion
     }
 }

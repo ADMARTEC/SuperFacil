@@ -126,6 +126,9 @@
   <data name="TagInvalido" xml:space="preserve">
     <value>O Autor não é valido</value>
   </data>
+  <data name="TagNome" xml:space="preserve">
+    <value>Nome</value>
+  </data>
   <data name="TagNomeInvalido" xml:space="preserve">
     <value>O nome do autor é invalido</value>
   </data>

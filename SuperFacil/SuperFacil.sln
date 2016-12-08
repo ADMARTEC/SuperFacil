@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.Business", "Supe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.UI._Console", "SuperFacil.UI.Console\SuperFacil.UI._Console.csproj", "{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFacil.UI._Web", "SuperFacil.UI._Web\SuperFacil.UI._Web.csproj", "{9617E4F1-EBC2-4721-ABAE-B9C093CA0B61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D71D831-D1DA-4158-A7EF-BCE55735DCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9617E4F1-EBC2-4721-ABAE-B9C093CA0B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9617E4F1-EBC2-4721-ABAE-B9C093CA0B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9617E4F1-EBC2-4721-ABAE-B9C093CA0B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9617E4F1-EBC2-4721-ABAE-B9C093CA0B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

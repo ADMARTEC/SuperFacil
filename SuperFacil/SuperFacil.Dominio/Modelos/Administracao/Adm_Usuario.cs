@@ -8,10 +8,6 @@ namespace SuperFacil.Dominio.Modelos.Administracao
     public class Adm_Usuario 
     {
         #region - Construtor -
-        public Adm_Usuario()
-        {       
-            this.Funcionario = new List<Reh_Funcionario>();
-        }
         #endregion
 
         #region - Propriedade -
@@ -35,8 +31,8 @@ namespace SuperFacil.Dominio.Modelos.Administracao
 
         #region - Relacionamento -
         public virtual Adm_Empresa Empresa { get; set; }
-       // public virtual Adm_Perfil Perfil { get; set; }
-        public virtual ICollection<Reh_Funcionario> Funcionario { get; set; }
+        //public virtual Adm_Perfil Perfil { get; set; }
+       // public virtual Reh_Funcionario Funcionario { get; set; }
         public virtual Glo_Imagem Imagem { get; set; }
 
         #endregion                

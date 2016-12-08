@@ -88,6 +88,15 @@ namespace SuperFacil.Common.Resource.Multimidia {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        public static string TagNome {
+            get {
+                return ResourceManager.GetString("TagNome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O nome do autor é invalido.
         /// </summary>
         public static string TagNomeInvalido {

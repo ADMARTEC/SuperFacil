@@ -1,13 +1,9 @@
 ﻿using SuperFacil.Dominio.Modelos.Administracao;
 using SuperFacil.Dominio.Modelos.Global;
 using SuperFacil.Dominio.Modelos.Sistema;
-using SuperFacil.Infraestrutura.Base;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperFacil.Infraestrutura
 {
@@ -179,7 +175,7 @@ namespace SuperFacil.Infraestrutura
 
             #region - Load Morada -
             morada.Add(new Glo_Morada()
-            {              
+            {
                 Pais_ID = 2,
                 Designacao = "Rua Conego Manuel das Neves",
                 Master = true,
@@ -196,7 +192,7 @@ namespace SuperFacil.Infraestrutura
             #region - Load Contactos -
 
             contacto.Add(new Glo_Contacto()
-            {              
+            {
                 Telefone = 925042327,
                 Email = "info@superfacil.com",
                 Responsavel = "Eng. Martinho Sebastião",
@@ -231,41 +227,79 @@ namespace SuperFacil.Infraestrutura
             });
             #endregion
 
+            #region - Load Perfil -
+            perfil.Add(new Adm_Perfil()
+            {
+                Aplicacao_ID = 1,
+                Empresa_ID = 1,
+                Parent_ID = null,
+                Designacao = "Governador",
+                HorarioAcesso_ID = null,
+                Activo = true,
+                CreateUser = 1,
+                CreateDate = DataInicio,
+                UpdateUser = 1,
+                UpdateDate = DataInicio,
+                Deleted = false,
+            });
+            #endregion
+
+            #region - Load Usuario -
+            usuario.Add(new Adm_Usuario()
+            {
+                Empresa_ID = 1,
+                Perfil_ID = 1,
+                Funcionario_ID = null,
+                Nome = "Governador de Sistema",
+                Imagem_ID = null,
+                Usuario_login = "sfgovsis",
+                Senha="0000000000",
+                Data_Limite= null,
+                Activo = true,
+                CreateUser = 1,
+                CreateDate = DataInicio,
+                UpdateUser = 1,
+                UpdateDate = DataInicio,
+                Deleted = false,
+            });
+            #endregion
+
             #region - Saving Default -
 
             foreach (Sis_Aplicacao item in aplicacao)
                 context.Sis_Aplicacao.Add(item);
-
             context.SaveChanges();
 
             foreach (Sis_Modulo item in modulo)
                 context.Sis_Modulo.Add(item);
-
             context.SaveChanges();
 
             foreach (Sis_Menu item in menu)
                 context.Sis_Menu.Add(item);
-
             context.SaveChanges();
-            
+
             foreach (Glo_Pais item in pais)
                 context.Glo_Pais.Add(item);
-
             context.SaveChanges();
 
             foreach (Glo_Morada item in morada)
                 context.Glo_Morada.Add(item);
-
             context.SaveChanges();
 
             foreach (Glo_Contacto item in contacto)
                 context.Glo_Contacto.Add(item);
-
             context.SaveChanges();
 
             foreach (Adm_Empresa item in empresa)
                 context.Adm_Empresa.Add(item);
+            context.SaveChanges();
 
+            foreach (Adm_Perfil item in perfil)
+                context.Adm_Perfil.Add(item);
+            context.SaveChanges();
+
+            foreach (Adm_Usuario item in usuario)
+                context.Adm_Usuario.Add(item);
             context.SaveChanges();
 
             #endregion

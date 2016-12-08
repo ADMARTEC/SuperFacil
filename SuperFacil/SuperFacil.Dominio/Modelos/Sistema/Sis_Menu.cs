@@ -6,8 +6,8 @@ namespace SuperFacil.Dominio.Modelos.Sistema
     {
         #region - Propriedade -
         public int Menu_ID { get; set; }
-        public int? Parent_ID { get; set; }
         public int Modulo_ID { get; set; }
+        public int? Parent_ID { get; set; }       
         public string Designacao { get; set; }
         public bool Activo { get; set; } = true;
         public int CreateUser { get; set; }

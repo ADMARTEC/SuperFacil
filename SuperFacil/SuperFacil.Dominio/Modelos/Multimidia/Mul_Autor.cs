@@ -16,8 +16,8 @@ namespace SuperFacil.Dominio.Modelos.Multimidia
         #region - Propriedade -
         public int Autor_ID { get; set; }
         public int Empresa_ID { get; set; }
-        public string Nome { get; set; }
         public int? Nota_ID { get; set; }
+        public string Nome { get; set; }       
         public bool Activo { get; set; } = true;
         public int CreateUser { get; set; }
         public DateTime CreateDate { get; set; }

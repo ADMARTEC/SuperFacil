@@ -15,6 +15,7 @@ namespace SuperFacil.UI._Console
             string r = emp.GetCodigo();
 
             Console.WriteLine("{0}", r);
+            Console.ReadKey();
 
         }
     }

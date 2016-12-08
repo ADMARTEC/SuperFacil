@@ -16,8 +16,8 @@ namespace SuperFacil.Dominio.Modelos.Sistema
         #region - Propriedade -        
         public int HorarioAcesso_ID { get; set; }
         public int Empresa_ID { get; set; }
-        public string Primeiro_Dia { get; set; }
-        public string Ultimo_Dia { get; set; }
+        public Int16 Primeiro_Dia { get; set; } // 2 = Segunda
+        public Int16 Ultimo_Dia { get; set; } // 7 = Domingo
         public TimeSpan Hora_Inicio { get; set; }
         public TimeSpan Hora_Fim { get; set; }
         public bool Activo { get; set; } = true;

@@ -19,7 +19,6 @@ namespace SuperFacil.Dominio.Modelos.Global
 
         #region - Relacionamento -
         public virtual Glo_Morada Morada { get; set; }
-        #endregion
-                
+        #endregion                
     }
 }
