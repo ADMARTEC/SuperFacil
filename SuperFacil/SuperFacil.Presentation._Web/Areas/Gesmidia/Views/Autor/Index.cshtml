@@ -1,0 +1,79 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Autor_ViewModel>
+
+@{
+    ViewBag.Title = "Autor";
+    // Parametros para a partial de pesquisa
+    ViewBag.Controlador = "Autor";
+    ViewBag.Accao = "Index";
+}
+
+<h2>Todos autores</h2>
+
+<p>
+    <a><i class="fa fa-plus-circle" onclick="createAutor()"> Autor</i></a>
+</p>
+
+
+@Html.Partial("_Pesquisa")
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayName("Nome")
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                <a><i class="fa fa-edit" onclick="editAutor(@item.Autor_ID)"></i></a>
+                @*<a><i class="fa fa-list" onclick="detalhesAutor(@item.Autor_ID)"></i></a>
+                    <a><i class="fa fa-remove" onclick="removeAutor(@item.Autor_ID)"></i></a>*@
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="modal" id="modal"></div>
+
+<div class="pager">
+    Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber ) de @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, _value = ViewBag.currentFilter }))
+</div>
+
+
+@section scripts{
+    <script>
+        function createAutor() {
+            $("#modal").load("/Gesmidia/Autor/Create", function () {
+                $("#modal").modal();
+            })
+        }
+
+        function editAutor(id) {
+            $("#modal").load("/Gesmidia/Autor/Edit?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function detalhesAutor(id) {
+            $("#modal").load("/Gesmidia/Autor/Details?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function removeAutor(id) {
+            $("#modal").load("/Gesmidia/Autor/Delete?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+    </script>
+}

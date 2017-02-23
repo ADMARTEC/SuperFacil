@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Angola a Programar</h1>
+    <p class="lead">Treinamento e soluções em desenvolvimento de software</p>
+    <p><a href="https://www.facebook.com/Angolaaprogramar/" class="btn btn-primary btn-lg">Saber mais &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Gestão de Multimida</h2>
+        <p>
+            Crie uma coleção fisica de musicas, filmes ou imagens e usa este aplicativo para dar suporte na arrumação e controle de localização dos mesmos...
+        </p>
+        <p><a class="btn btn-primary" href="@Url.Action("Index", "Home", new { area = "Gesmidia" })">Iniciar &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Gestão de Inqueritos</h2>
+        <p>Se pretendes desencadear uma pesquisa social ou efectuar recolha de dados use este aplicativo...</p>
+        <p><a class="btn btn-primary" href="@Url.Action("Index", "Home", new { area = "Inquerito" })">Iniciar &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Gestão Empresarial</h2>
+        <p>Para os empreendedores Angolanos oferecemos este aplicativo para dar suporte as suas actividades nas areas de Recursos Humanos, Finanças e Comercial...</p>
+        <p><a class="btn btn-primary" href="#">Iniciar &raquo;</a></p>
+    </div>
+</div>

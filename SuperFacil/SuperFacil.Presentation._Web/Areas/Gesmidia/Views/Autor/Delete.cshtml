@@ -1,0 +1,50 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Autor_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Delete";
+}
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Deseja eliminar este autor</h4>
+        </div>
+        <div class="modal-body">
+            <dl class="dl-horizontal">
+                @Html.HiddenFor(model => model.Activo)
+                @Html.HiddenFor(model => model.CreateDate)
+                @Html.HiddenFor(model => model.CreateUser)
+                @Html.HiddenFor(model => model.Deleted)
+                @Html.HiddenFor(model => model.Default)
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>        
+
+            </dl>
+        </div>
+        <div class="modal-footer">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

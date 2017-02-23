@@ -1,0 +1,71 @@
+﻿@using PagedList.Mvc;
+@model  PagedList.IPagedList<SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Localizacao_ViewModel>
+
+@{
+    ViewBag.Title = "Localização";
+    ViewBag.Controlador = "Localizacao";
+    ViewBag.Accao = "Index";
+}
+
+<h2>Todas as localizações</h2>
+
+<p>
+    <a><i class="fa fa-plus-circle" onclick="createLocal()"> Localização</i></a>
+</p>
+
+@Html.Partial("_Pesquisa")
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Designacao")
+        </th>     
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designacao)
+        </td>     
+        <td>
+            <a><i class="fa fa-edit" onclick="editAutor(@item.Localizacao_ID)"></i></a>
+        </td>
+    </tr>
+}
+</table>
+
+<div class="modal" id="modal" role="dialog"></div>
+
+<div class="pager">
+    Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber ) de @Model.PageCount
+    @Html.PagedListPager(Model, _page => Url.Action("Index", new { _page, _value = ViewBag.currentFilter }))
+</div>
+
+@section scripts{   
+    <script>
+        function createLocal() {
+            $("#modal").load("/Gesmidia/Localizacao/Create", function () {
+                $("#modal").modal();
+            })
+        }
+
+        function editLocal(id) {
+            $("#modal").load("/Gesmidia/Localizacao/Edit?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function detalhesLocal(id) {
+            $("#modal").load("/Gesmidia/Localizacao/Details?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function removeLocal(id) {
+            $("#modal").load("/Gesmidia/Localizacao/Delete?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+    </script>
+}

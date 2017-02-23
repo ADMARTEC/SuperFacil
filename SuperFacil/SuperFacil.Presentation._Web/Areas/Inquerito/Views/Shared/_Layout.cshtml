@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Super Facíl</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="fundo">
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo_Inquerito" href="@Url.Action("Index", "Home", new { area = "Inquerito" })">
+                    <span>
+                        <img src="~/Areas/Inquerito/imagens/logo.jpg" />
+                    </span>
+                    <p>OAPR - Casa Civil - Secretria Social</p>
+                </a>
+                @*@Html.ActionLink("OAPR - C.M.E.S.C.N.J.A.C.I.P", "Index", "Home", new { area = "Inquerito" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>                   
+                    <li>@Html.ActionLink("Responder Inquerito", "Index", "Respostas")</li>
+                    <li>@Html.ActionLink("Analise de dados", "Analise", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="papelA">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer>
+        <p>Comissão Multi-Sectorial para o Estudo sobre o Comportamento Negativo da Juventude e Adultos com Consequências Imprevisíveis para o País</p>
+        <p>&copy; @DateTime.Now.Year - @Html.ActionLink("Super Facíl - Inquerito", "Index","Home", new { area = "" }) </p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

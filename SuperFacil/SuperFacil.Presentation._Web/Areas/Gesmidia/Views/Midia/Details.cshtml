@@ -1,0 +1,25 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Midia_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Details";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Detalhes da Midia</h4>
+        </div>
+        <div class="modal-body">
+            <p>@Html.DisplayNameFor(model => model.Designacao) : @Html.DisplayFor(model => model.Designacao)</p>
+            <p>@Html.DisplayNameFor(model => model.Autor_ID) : @Html.DisplayFor(model => model.Autor_ID)</p>
+            <p>@Html.DisplayNameFor(model => model.Localizacao.Designacao) : @Html.DisplayFor(model => model.Localizacao.Designacao)</p>
+        </div>
+        <div class="modal-footer">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Midia_ID })
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+
+        </div>
+    </div>
+</div>

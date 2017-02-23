@@ -1,0 +1,60 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Midia_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Delete";
+    ViewBag.Titulo = "Deseja eliminar " /*+ @Model.Designacao +*/;
+}
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        @Html.Partial("_HeaderModal")
+
+        <div class="modal-body">
+            <dl class="dl-horizontal">
+                @Html.HiddenFor(model => model.Activo)
+                @Html.HiddenFor(model => model.CreateDate)
+                @Html.HiddenFor(model => model.CreateUser)
+                @Html.HiddenFor(model => model.Deleted)
+                @Html.HiddenFor(model => model.Default)
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Autor_ID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Autor_ID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Localizacao.Designacao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Localizacao.Designacao)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Designacao)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Designacao)
+                </dd>
+
+            </dl>
+        </div>
+        <div class="modal-footer">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-warning" /> |
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

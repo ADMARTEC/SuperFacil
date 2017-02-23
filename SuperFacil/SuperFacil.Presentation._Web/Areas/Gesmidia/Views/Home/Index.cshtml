@@ -1,0 +1,118 @@
+﻿@using PagedList.Mvc;
+@model  PagedList.IPagedList<SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Autor_ViewModel>
+
+@{
+    ViewBag.Title = "Musica e lazer";
+
+    // Parametros para a partial de pesquisa
+    ViewBag.Controlador = "Home";
+    ViewBag.Accao = "Index";
+}
+
+<h2>Musica é vida e saúde</h2>
+
+@Html.Partial("_Pesquisa")
+
+<div class="">
+    <a><i class="fa fa-user-plus" onclick="CreateAutor()"> Autor</i></a>
+    <a><i class="fa fa-music" onclick="CreateMidia()"> Midia</i></a>
+    <a><i class="fa fa-cogs" onclick="CreateLocal()"> Localização</i></a>
+</div>
+
+
+<div class="row" id="acordion">
+
+    @foreach (var nivel1 in Model.GroupBy(x => x.Nome))
+    {
+        foreach (var nivel2 in nivel1.Take(1))
+        {
+            <div class="esquerda" id="myS">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a data-toggle="collapse" data-parent="#acordion" data-target=#@nivel2.Autor_ID>
+                            @Html.DisplayFor(x => nivel2.Nome)
+                            <span class="badge">@nivel2.Midia.Count</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse" id="@nivel2.Autor_ID">
+                @foreach (var item in nivel2.Midia)
+                {
+                    <div>
+                        <p class="disco">
+                            @Html.DisplayFor(x => item.Designacao))
+                            <span class="direita">                            
+                                <a><i class="fa fa-edit" onclick="editMidia(@item.Midia_ID)"></i></a>
+                                <a><i class="fa fa-list" onclick="detalhesMidia(@item.Midia_ID)"></i></a>
+                                <a><i class="fa fa-remove" onclick="removeMidia(@item.Midia_ID)"></i></a>
+                            </span>
+                        </p>
+                        <p class="local">
+                            @Html.DisplayFor(x => item.Localizacao.Designacao)
+                            <span class="direita">
+                                @*<a><i class="fa fa-edit" onclick="editLocal(@item.Localizacao_ID)"></i></a>
+                                <a><i class="fa fa-list" onclick="detalhesLocal(@item.Localizacao_ID)"></i></a>
+                                <a><i class="fa fa-remove" onclick="removeLocal(@item.Localizacao_ID)"></i></a>*@
+                            </span>
+                        </p>
+                    </div>
+                }
+            </div>
+        }
+    }
+
+</div>
+
+<div class="modal" id="modal" role="dialog"></div>
+
+<div class="pager">
+    Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber ) de @Model.PageCount
+    @Html.PagedListPager(Model, _page => Url.Action("Index", new { _page, _value = ViewBag.currentFilter }))
+</div>
+
+@section scripts{   
+    <script>
+        // Criação ***************************
+        function CreateAutor() {
+            $("#modal").load("/Gesmidia/Autor/Create", function () {
+                $("#modal").modal();
+            })
+        }
+
+        function CreateMidia() {
+            $("#modal").load("/Gesmidia/Midia/Create", function () {
+                $("#modal").modal();
+            })
+        }
+        function CreateLocal() {
+            $("#modal").load("/Gesmidia/Localizacao/Create", function () {
+                $("#modal").modal();
+            })
+        }
+        //************************************
+      
+
+        // Midia
+        function editMidia(id) {
+            $("#modal").load("/Gesmidia/Midia/Edit?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function detalhesMidia(id) {
+            $("#modal").load("/Gesmidia/Midia/Details?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+
+        function removeMidia(id) {
+            $("#modal").load("/Gesmidia/Midia/Delete?id=" + id, function () {
+                $("#modal").modal();
+            })
+        }
+    </script>
+}
+
+

@@ -1,0 +1,37 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Localizacao_ViewModel
+
+
+@{
+    Layout = null;
+    ViewBag.Title = "Nova localizacao";
+    ViewBag.Titulo = "Criar nova localização";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        @Html.Partial("_HeaderModal")
+
+        @using (Html.BeginForm("Create", "Localizacao", FormMethod.Post, new { @id = "CreateForm" }))
+        {
+
+            @Html.AntiForgeryToken()
+
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Designacao, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Designacao, new { @class = "form-control", placeholder = "Digite uma localização" })
+                            @Html.ValidationMessageFor(model => model.Designacao, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @Html.Partial("_FooterModal")
+
+        }
+    </div>
+</div>

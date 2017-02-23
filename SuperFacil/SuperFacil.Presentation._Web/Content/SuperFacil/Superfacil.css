@@ -1,0 +1,69 @@
+﻿.container{
+    width:100%;
+}
+.fundo {
+    position: relative;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+.papelA {
+    width: 80%;
+    background-color: #ffffff;
+    margin: 5px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    padding: 10px;
+}
+/*formatação da barra de menu*/
+.fundo h2.titulo {
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+
+.fundo .navbar {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(0,0,0,.3);
+}
+
+    .fundo .navbar ul {
+        float: right;
+    }
+
+        .fundo .navbar ul a:hover {
+            color: #000000;
+            text-shadow: 1px 1px 1px #000000;
+        }
+
+.fundo .navbar-brand p {
+    margin-top: -8%;
+    margin-left: 10%;
+    font-size: 20pt;
+}
+
+.fundo .navbar-brand img {
+    margin-top: -3.5%;
+    width: 10%;
+}
+
+.fundo .navbar-header .icon-bar {
+    background-color: #000;
+}
+
+.fundo footer, footer a,
+footer a:hover, .fundo .navbar-brand,
+.fundo .navbar ul a, .fundo h2.titulo {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+/*Formatação do rodapé*/
+.fundo footer {
+    background-color: rgba(0,0,0,.3);
+    margin: 5px 10% auto 10%;
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+}

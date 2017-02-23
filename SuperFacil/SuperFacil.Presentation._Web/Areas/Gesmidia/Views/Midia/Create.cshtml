@@ -1,0 +1,53 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Midia_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Nova Midia";
+    ViewBag.Titulo = "Criar nova midia";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        @Html.Partial("_HeaderModal")
+
+        @using (Html.BeginForm("Create", "Midia", FormMethod.Post, new { @id = "CreateForm" }))
+        {
+
+            @Html.AntiForgeryToken()
+
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.LabelFor(model=> model.Autor_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.Autor_ID, ViewBag.Autor as SelectList,"Selecione um autor", new { @class = "selectpicker", data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Autor_ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Localizacao_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.Localizacao_ID, ViewBag.Localizacao as SelectList,"Selecione uma localização", new { @class = "selectpicker", data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Localizacao_ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Designacao, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Designacao, new { @class = "form-control", placeholder = "Digite o titulo da midia" })
+                            @Html.ValidationMessageFor(model => model.Designacao, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @Html.Partial("_FooterModal")
+        }
+
+    </div>
+</div>

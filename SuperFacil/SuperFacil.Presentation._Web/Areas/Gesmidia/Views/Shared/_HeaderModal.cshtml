@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "_FooterModal";
+    var titulo = (string)ViewBag.Titulo ?? "";
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Fechar</span></button>
+    <h4 class="modal-title">@titulo</h4>
+</div>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/SuperFacil/Gesmidia.js"></script>

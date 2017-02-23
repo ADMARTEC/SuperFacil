@@ -1,0 +1,26 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Autor_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Details";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Detalhes do autor</h4>
+        </div>
+        <div class="modal-body">
+            <p>@Html.DisplayNameFor(model => model.Nome) : @Html.DisplayFor(model => model.Nome)</p>
+            <p>@Html.DisplayNameFor(model => model.Activo) : @Html.DisplayFor(model => model.Activo)</p>
+            <p>@Html.DisplayNameFor(model => model.CreateUser) : @Html.DisplayFor(model => model.CreateUser)</p>
+            <p>@Html.DisplayNameFor(model => model.CreateDate) : @Html.DisplayFor(model => model.CreateDate)</p>
+            <p>@Html.DisplayNameFor(model => model.UpdateUser) : @Html.DisplayFor(model => model.UpdateUser)</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+    </div>
+</div>
+

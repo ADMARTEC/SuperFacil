@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F0F6CB0-8249-48EE-8035-7F5690582CAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperFacil.Business</RootNamespace>
+    <AssemblyName>SuperFacil.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppServiceBase.cs" />
+    <Compile Include="GestEmpresa\Administracao\Admin_Documento_Numero_AppService.cs" />
+    <Compile Include="GestEmpresa\Administracao\Admin_Documento_Rodape_AppService.cs" />
+    <Compile Include="GestEmpresa\Administracao\Admin_Documento_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Artigo\Com_Artigo_Familia_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Artigo\Com_Artigo_Preco_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Artigo\Com_Artigo_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Cliente\Com_Cliente_Contactos_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Cliente\Com_Cliente_Evento_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Cliente\Com_Cliente_Evento_Tipo_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Cliente\Com_Cliente_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Generico\Com_Gen_FormaPagamento_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Generico\Com_Gen_PrazoPagamento_AppService.cs" />
+    <Compile Include="GestEmpresa\Comercial\Generico\Com_Gen_TabelaPreco_AppService.cs" />
+    <Compile Include="GestEmpresa\Financas\Bancos\Fin_Banco_Conta_AppService.cs" />
+    <Compile Include="GestEmpresa\Financas\Bancos\Fin_Banco_Conta_TPA_AppService.cs" />
+    <Compile Include="GestEmpresa\Financas\Bancos\Fin_Banco_AppService.cs" />
+    <Compile Include="GestEmpresa\Financas\Generico\Fin_Gen_Moeda_Cambio_AppService.cs" />
+    <Compile Include="GestEmpresa\Financas\Generico\Fin_Gen_Moeda_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Inquerito_Pergunta_Categoria_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Inquerito_Pergunta_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Questionario_Resposta_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Questionario_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Inquerito_Resposta_AppService.cs" />
+    <Compile Include="Inquerito\Inq_Inquerito_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Administracao\IAdmin_Documento_Numero_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Administracao\IAdmin_Documento_Rodape_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Administracao\IAdmin_Documento_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Artigo\ICom_Artigo_Familia_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Artigo\ICom_Artigo_Preco_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Artigo\ICom_Artigo_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Cliente\ICom_Cliente_Contactos_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_Tipo_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Cliente\ICom_Cliente_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Generico\ICom_Gen_FormaPagamento_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Generico\ICom_Gen_PrazoPagamento_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Comercial\Generico\ICom_Gen_TabelaPreco_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_TPA_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Financas\Bancos\IFin_Banco_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_Cambio_AppService.cs" />
+    <Compile Include="Interface\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_AppService.cs" />
+    <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Inquerito_Pergunta_Categoria_AppService.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Inquerito_Pergunta_AppService.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Inquerito_Resposta__AppService.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Inquerito_AppService.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Questionario_Resposta_AppService.cs" />
+    <Compile Include="Interface\Inquerito\IInq_Questionario_AppService.cs" />
+    <Compile Include="Interface\Multimidia\IMul_Autor_AppService.cs" />
+    <Compile Include="Interface\Multimidia\IMul_Localizacao_AppService.cs" />
+    <Compile Include="Interface\Multimidia\IMul_Midia_AppService.cs" />
+    <Compile Include="Interface\Sistema\Generico\ISis_Gen_Pais_AppService.cs" />
+    <Compile Include="Interface\Sistema\ISis_Empresa_AppService.cs" />
+    <Compile Include="Multimidia\Mul_Autor_AppService.cs" />
+    <Compile Include="Multimidia\Mul_Localizacao_AppService.cs" />
+    <Compile Include="Multimidia\Mul_Midia_AppService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema\Generico\Sis_Gen_Pais_AppService.cs" />
+    <Compile Include="Sistema\Sis_Empresa_AppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperFacil.Domain\SuperFacil.Domain.csproj">
+      <Project>{DE43C2F1-28AA-4A4B-AE2A-893AD03119C8}</Project>
+      <Name>SuperFacil.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

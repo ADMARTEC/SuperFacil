@@ -1,0 +1,64 @@
+﻿/*Formatação de autonavegação*/
+.badge {
+    float: right;
+}
+
+ul .nav-pills {
+    top: 50px;
+    position: fixed;
+}
+
+.col-sm-4 {
+    margin: auto 30px 20px auto;
+}
+
+.esquerda, p.disco, p.local {
+    margin: auto 20% auto 20%;
+}
+
+.direita {
+    float: right;
+    text-align: right;
+}
+
+.esquerda ul a {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgba(0,0,0,.3);
+    margin: 10px auto 10px auto;
+}
+
+p.disco {
+    font-size: 12pt;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+p.local {
+    font-size: 10pt;
+    margin-bottom: 5px;
+}
+/*Formatação dos botoes de crud*/
+.fa {
+    font-size: 15pt;
+    text-shadow: none;
+}
+
+.fa .fa-edit{
+    color:#4cff00
+}
+
+.fa .fa-remove{
+    color:red;
+}
+/*Formatação de tabelas*/
+table {
+    table-layout:auto;
+    margin-top:1%;
+    border: 1px solid #d7e2e8;
+}
+table th{
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
+}

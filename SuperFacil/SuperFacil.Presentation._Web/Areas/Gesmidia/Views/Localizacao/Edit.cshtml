@@ -1,0 +1,42 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Gesmidia.ViewModels.Localizacao_ViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Editar Localizacao";
+    ViewBag.Titulo = "Actualizar localização";
+}
+<div class="modal-dialog">
+    <div class="modal-content">
+
+        @Html.Partial("_HeaderModal")
+
+        @using (Html.BeginForm("Edit", "Localizacao", FormMethod.Post, new { @id = "EditForm" }))
+        {
+           
+            @Html.AntiForgeryToken()
+
+            <div class="modal-body">
+                <div class="form-horizontal">
+                  
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Localizacao_ID)
+                    @Html.HiddenFor(model => model.Activo)
+                    @Html.HiddenFor(model => model.CreateDate)
+                    @Html.HiddenFor(model => model.CreateUser)
+                    @Html.HiddenFor(model => model.Deleted)
+                    @Html.HiddenFor(model => model.Default)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Designacao, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Designacao, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Designacao, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @Html.Partial("_FooterModal")
+        }
+    </div>
+</div>

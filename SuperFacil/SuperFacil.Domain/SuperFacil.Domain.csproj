@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE43C2F1-28AA-4A4B-AE2A-893AD03119C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperFacil.Domain</RootNamespace>
+    <AssemblyName>SuperFacil.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Inquerito\Inq_Inquerito_Pergunta_Categoria.cs" />
+    <Compile Include="Entities\Inquerito\Inq_Questionario_Resposta.cs" />
+    <Compile Include="Entities\Sistema\Generico\Sis_Gen_Pais.cs" />
+    <Compile Include="Entities\Sistema\Sis_Empresa.cs" />
+    <Compile Include="Entities\GestEmpresa\Administracao\Admin_Documento.cs" />
+    <Compile Include="Entities\GestEmpresa\Administracao\Admin_Documento_Numero.cs" />
+    <Compile Include="Entities\GestEmpresa\Administracao\Admin_Documento_Rodape.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Artigo\Com_Artigo.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Artigo\Com_Artigo_Familia.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Artigo\Com_Artigo_Preco.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Cliente\Com_Cliente.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Cliente\Com_Cliente_Contactos.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Cliente\Com_Cliente_Evento.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Cliente\Com_Cliente_Evento_Tipo.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Generico\Com_Gen_FormaPagamento.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Generico\Com_Gen_PrazoPagamento.cs" />
+    <Compile Include="Entities\GestEmpresa\Comercial\Generico\Com_Gen_TabelaPreco.cs" />
+    <Compile Include="Entities\GestEmpresa\Financas\Bancos\Fin_Banco.cs" />
+    <Compile Include="Entities\GestEmpresa\Financas\Bancos\Fin_Banco_Conta.cs" />
+    <Compile Include="Entities\GestEmpresa\Financas\Bancos\Fin_Banco_Conta_TPA.cs" />
+    <Compile Include="Entities\GestEmpresa\Financas\Generico\Fin_Gen_Moeda.cs" />
+    <Compile Include="Entities\GestEmpresa\Financas\Generico\Fin_Gen_Moeda_Cambio.cs" />
+    <Compile Include="Entities\Inquerito\Inq_Inquerito.cs" />
+    <Compile Include="Entities\Inquerito\Inq_Inquerito_Pergunta.cs" />
+    <Compile Include="Entities\Inquerito\Inq_Inquerito_Resposta.cs" />
+    <Compile Include="Entities\Inquerito\Inq_Questionario.cs" />
+    <Compile Include="Entities\Multimidia\Mul_Autor.cs" />
+    <Compile Include="Entities\Multimidia\Mul_Localizacao.cs" />
+    <Compile Include="Entities\Multimidia\Mul_Midia.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Perfil.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Claims.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Perfil_Claims.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Usuario.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Usuario_Claims.cs" />
+    <Compile Include="Interface\IRepositoryBase.cs" />
+    <Compile Include="Interface\IServiceBase.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Administracao\IAdmin_Documento_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Administracao\IAdmin_Documento_Numero_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Administracao\IAdmin_Documento_Rodape_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Artigo\ICom_Artigo_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Artigo\ICom_Artigo_Familia_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Artigo\ICom_Artigo_Preco_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Cliente\ICom_Cliente_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Cliente\ICom_Cliente_Contactos_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_Tipo_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Generico\ICom_Gen_FormaPagamento_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Generico\ICom_Gen_PrazoPagamento_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Comercial\Generico\ICom_Gen_TabelaPreco_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Financas\Bancos\IFin_Banco_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_TPA_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_Repository.cs" />
+    <Compile Include="Interface\Repositories\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_Cambio_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Inquerito_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Inquerito_Pergunta_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Inquerito_Pergunta_Categoria_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Inquerito_Resposta_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Questionario_Repository.cs" />
+    <Compile Include="Interface\Repositories\Inquerito\IInq_Questionario_Resposta_Repository.cs" />
+    <Compile Include="Interface\Repositories\Multimidia\IMul_Autor_Repository.cs" />
+    <Compile Include="Interface\Repositories\Multimidia\IMul_Localizacao_Repository.cs" />
+    <Compile Include="Interface\Repositories\Multimidia\IMul_Midia_Repository.cs" />
+    <Compile Include="Interface\Repositories\Sistema\Generico\ISis_Gen_Pais_Repository.cs" />
+    <Compile Include="Interface\Repositories\Sistema\ISis_Empresa_Repository.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Administracao\IAdmin_Documento_Numero_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Administracao\IAdmin_Documento_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Administracao\IAdmin_Documento_Rodape_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Artigo\ICom_Artigo_Familia_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Artigo\ICom_Artigo_Preco_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Artigo\ICom_Artigo_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Cliente\ICom_Cliente_Contactos_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Cliente\ICom_Cliente_Evento_Tipo_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Cliente\ICom_Cliente_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Generico\ICom_Gen_FormaPagamento_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Generico\ICom_Gen_PrazoPagamento_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Comercial\Generico\ICom_Gen_TabelaPreco_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Financas\Bancos\IFin_Banco_Conta_TPA_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Financas\Bancos\IFin_Banco_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_Cambio_Service.cs" />
+    <Compile Include="Interface\Services\GestEmpresa\Financas\Generico\IFin_Gen_Moeda_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Inquerito_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Inquerito_Pergunta_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Inquerito_Pergunta_Categoria_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Inquerito_Resposta_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Questionario_Service.cs" />
+    <Compile Include="Interface\Services\Inquerito\IInq_Questionario_Resposta_Service.cs" />
+    <Compile Include="Interface\Services\Multimidia\IMul_Autor_Service.cs" />
+    <Compile Include="Interface\Services\Multimidia\IMul_Localizacao_Service.cs" />
+    <Compile Include="Interface\Services\Multimidia\IMul_Midia_Service.cs" />
+    <Compile Include="Interface\Services\Sistema\Generico\ISis_Gen_Pais_Service.cs" />
+    <Compile Include="Interface\Services\Sistema\ISis_Empresa_Service.cs" />
+    <Compile Include="Entities\Sistema\User\Sis_Use_Usuario_Empresa.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interface\Repositories\Sistema\User\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

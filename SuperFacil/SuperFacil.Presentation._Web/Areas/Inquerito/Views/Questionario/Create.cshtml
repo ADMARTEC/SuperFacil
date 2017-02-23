@@ -1,0 +1,74 @@
+﻿@model SuperFacil.Presentation._Web.Areas.Inquerito.ViewModel.Inq_Questionario_ViewModel
+
+@{
+    ViewBag.Title = "Questionario";
+}
+
+<h2>@ViewBag.Inquerito</h2>
+
+
+    @using (Html.BeginForm("Create", "Questionario", FormMethod.Post, new { @id = "CreateForm" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <hr />
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Pais_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(x => x.Pais_ID, ViewBag.Provincia as SelectList, new { @class = "selectpicker show-tick", data_live_search = "true" })
+                    @Html.ValidationMessageFor(model => model.Pais_ID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Municipio_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(x => x.Municipio_ID, new List<SelectListItem>(), "Selecione um Municipio", new { @class = "selectpicker show-tick", data_live_search = "true" })
+                    @Html.ValidationMessageFor(model => model.Municipio_ID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Designacao, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Designacao, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Designacao, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" class="btn btn-success" />
+                    <input type="reset" value="Cancelar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        <script>
+
+            $(document).ready(function () {
+                $('#Pais_ID').change(function () {
+                    var value = $(this).val();
+
+                    $.get('/Questionario/Get_Lista_Municipio', { _value: value }).done(function (data) {
+
+                        $("#Municipio_ID :gt(0)").remove(); // Limpa a dropdown deixando apenas o primeiro item
+
+                        $.each(data, function () {
+                            $("#Municipio_ID").append("<option value='" + this.Pais_ID + "'>" + this.Designacao + "</option>");
+                        });
+
+                        $("#Municipio_ID").selectpicker('refresh');
+
+                    });
+                });
+            });
+        </script>
+    }
